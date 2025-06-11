@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAI Education - Nền tảng học tập thông minh</title>
+    <meta name="description" content="Nền tảng giáo dục trực tuyến hiện đại với công nghệ AI">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/main.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./components/header.html" as="fetch" crossorigin>
+    <link rel="preload" href="./components/hero.html" as="fetch" crossorigin>
+    <link rel="preload" href="./assets/logo.svg" as="image">
+    <link rel="preload" href="./assets/sec1.png" as="image">
+</head>
+<body class="antialiased">
+    <!-- Loading indicator -->
+    <div id="loading" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-12 h-12 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+            <p class="text-gray-600">Loading...</p>
+        </div>
+    </div>
+    
+    <!-- Header will be injected here as fixed position -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section Placeholder -->
+        <div id="hero-placeholder"></div>
+
+        <!-- About Section Placeholder -->
+        <div id="about-placeholder"></div>
+
+        <!-- Solution Section Placeholder -->
+        <div id="solution-placeholder"></div>
+
+        <!-- Product Section Placeholder -->
+        <div id="product-placeholder"></div>
+
+        <!-- Competition Section Placeholder -->
+        <div id="competition-placeholder"></div>
+
+        <!-- Blog Section Placeholder -->
+        <div id="blog-placeholder"></div>
+
+        <!-- Download Section Placeholder -->
+        <div id="download-placeholder"></div>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="./js/components.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    
+    <!-- Hide loading screen when everything is loaded -->
+    <script>
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.opacity = '0';
+                setTimeout(() => {
+                    loading.remove();
+                }, 300);
+            }
+        });
+    </script>
+</body>
+</html> 

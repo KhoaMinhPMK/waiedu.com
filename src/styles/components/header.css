@@ -1,0 +1,892 @@
+/* Header Component Styles - Backup basic styles */
+#header {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure header is visible - Emergency fallback */
+header.glass-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force header visibility debugging */
+#header-placeholder {
+    display: block !important;
+}
+
+#header-placeholder .glass-header {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+}
+
+#header.scrolled {
+    background: rgba(255, 255, 255, 0.99);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Mobile menu animation */
+#mobileMenu {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+#mobileMenu.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Navigation links */
+/* Old header nav styles disabled - using glass styles instead */
+#header nav a {
+    position: relative;
+}
+
+#header nav a::after {
+    display: none !important; /* Disable underline effect */
+}
+
+#header nav a:hover::after {
+    display: none !important; /* Disable underline effect */
+}
+
+/* ======================================================== */
+/* ENHANCED LIQUID GLASS HEADER - APPLE VISION PRO STYLE */
+/* ======================================================== */
+
+/* CSS Custom Properties for Simple Liquid Glass */
+:root {
+    /* Simple transitions */
+    --liquid-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --liquid-fast-transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-header {
+    /* Simple Liquid Glass with Black Tint - Single State */
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    
+    /* Simple border */
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    
+    /* Simple shadow system */
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 1px 20px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+    
+    /* Positioning and layout - Compact design */
+    margin: 12px 16px 0 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+    
+    /* Ensure container is visible - Reduced height */
+    display: block !important;
+    width: auto;
+    height: auto;
+    min-height: 60px;
+    max-height: 64px;
+    
+    /* Enhanced transitions */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Ensure container has proper styling - Wider layout */
+.glass-header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Navigation flex layout - Compact và wider spacing */
+.glass-header nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.375rem 0;
+    min-height: 56px;
+    max-height: 60px;
+}
+
+/* Ensure logo and brand section is visible */
+.glass-header .flex.items-center.space-x-3 {
+    display: flex !important;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Brand text styling - Compact */
+.glass-header h1 {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+/* Desktop navigation visibility - Wider spacing */
+.glass-header .hidden.lg\\:flex {
+    display: none !important;
+}
+
+@media (min-width: 1024px) {
+    .glass-header .hidden.lg\\:flex {
+        display: flex !important;
+        align-items: center;
+        gap: 3rem;
+        flex: 1;
+        justify-content: center;
+        margin: 0 2rem;
+    }
+}
+
+/* CTA button visibility */
+.glass-header .hidden.lg\\:block {
+    display: none !important;
+}
+
+@media (min-width: 1024px) {
+    .glass-header .hidden.lg\\:block {
+        display: block !important;
+    }
+}
+
+/* Mobile menu button - always visible on mobile */
+.glass-header .lg\\:hidden {
+    display: block !important;
+}
+
+@media (min-width: 1024px) {
+    .glass-header .lg\\:hidden {
+        display: none !important;
+    }
+}
+
+/* Simple Glass reflection layer */
+.glass-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* Simple reflection */
+    background: 
+        linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.08) 60%, transparent 100%);
+    
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Simple Glass shimmer effect */
+.glass-header::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    
+    /* Simple shimmer */
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.05) 50%,
+        transparent 70%
+    );
+    border-radius: inherit;
+    
+    /* Simple animation */
+    animation: liquidShimmer 4s ease-in-out infinite;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glass-header:hover::after {
+    opacity: 1;
+}
+
+/* Simple hover effect */
+.glass-header:hover {
+    backdrop-filter: blur(45px) saturate(200%);
+    -webkit-backdrop-filter: blur(45px) saturate(200%);
+}
+
+@keyframes liquidShimmer {
+    0%, 100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+    50% {
+        transform: translateX(200%) skewX(-15deg);
+    }
+}
+
+
+
+/* Simple Glass reflection */
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    
+    /* Simple reflection */
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.4) 20%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.4) 80%,
+        transparent 100%
+    );
+    
+    border-radius: 24px 24px 0 0;
+    
+    /* Simple flow animation */
+    animation: liquidFlow 3s ease-in-out infinite;
+}
+
+@keyframes liquidFlow {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scaleX(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1.1);
+    }
+}
+
+/* Enhanced Logo container with liquid glass - Smaller and rounder */
+.glass-logo-container {
+    width: 44px;
+    height: 44px;
+    
+    /* Liquid glass styling with black tint */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    /* Enhanced border and shadow */
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px !important; /* Fixed border-radius */
+    
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 1px 4px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo reflection effect */
+.glass-logo-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-logo-container:hover::before {
+    left: 100%;
+}
+
+.glass-logo-container:hover {
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Simple Navigation links - No effects */
+.nav-link-glass {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    letter-spacing: -0.01em !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important; /* Fixed border-radius */
+    
+    /* Black background */
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    
+    /* No transitions or animations for default state */
+    transition: all 0.2s ease !important;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none !important;
+    
+    /* No shadow */
+    box-shadow: none !important;
+    
+    /* Reset button styles if used as button */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+    
+    /* Reset any browser default button styling */
+    background-image: none !important;
+    border-style: solid !important;
+    cursor: pointer !important;
+}
+
+/* Removed all navigation link effects */
+
+.nav-link-glass:hover {
+    /* No effects - keep same as default state */
+    cursor: pointer; /* Keep pointer cursor for links */
+    color: rgba(255, 255, 255, 0.9); /* Keep same color */
+    background: rgba(0, 0, 0, 0.8); /* Keep same black background */
+    border: 0.5px solid rgba(255, 255, 255, 0.2); /* Keep same border */
+    box-shadow: none; /* No shadow */
+}
+
+/* Temporary active state when clicking (quick flash) */
+.nav-link-glass:active {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: none;
+    transition: all 0.15s ease !important;
+}
+
+/* Persistent active state for selected navigation link */
+.nav-link-glass.active {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: none;
+    transition: all 0.2s ease !important;
+}
+
+/* Enhanced Dynamic Island Button for Get Started */
+.btn-primary-glass {
+    padding: 6px 16px !important; /* Override the Tailwind padding */
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    
+    /* Black background button */
+    background: rgba(0, 0, 0, 0.8);
+    
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 32px !important; /* Fixed border-radius */
+    
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.2),
+        0 1px 4px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary-glass:hover {
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary-glass:active {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: scale(0.95);
+    transition: all 0.15s ease !important;
+}
+
+/* Enhanced Mobile menu button */
+.glass-menu-btn {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Liquid glass styling with black tint */
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-menu-btn span {
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}    .glass-menu-btn:hover {
+        background: rgba(0, 0, 0, 0.15);
+        
+        box-shadow: 
+            0 6px 20px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+/* Enhanced Mobile menu */
+.mobile-menu-glass {
+    background: rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    
+    border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+    margin-top: 1px;
+    border-radius: 0 0 24px 24px;
+    
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 18px;
+    margin: 3px 0;
+    
+    /* Black background */
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    
+    /* Transition for smooth effects */
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.mobile-nav-link:hover {
+    /* No effects on hover - keep same as default */
+    color: rgba(255, 255, 255, 0.9); /* Keep same color */
+    background: rgba(0, 0, 0, 0.8); /* Keep same black background */
+    border: 0.5px solid rgba(255, 255, 255, 0.2); /* Keep same border */
+    box-shadow: none; /* No shadow */
+}
+
+/* Temporary active state when clicking mobile links */
+.mobile-nav-link:active {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: none;
+    transition: all 0.15s ease !important;
+}
+
+/* Persistent active state for selected mobile navigation link */
+.mobile-nav-link.active {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: none;
+    transition: all 0.2s ease !important;
+}
+
+/* ================================================= */
+/* SCROLL EFFECTS WITH ENHANCED LIQUID GLASS */
+/* ================================================= */
+
+/* Keep header consistent - no scroll state changes */
+.glass-header.scrolled {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Remove all animation borders and outlines */
+.nav-link-glass,
+.nav-link-glass:hover,
+.nav-link-glass:focus,
+.nav-link-glass:active,
+.nav-link-glass:focus-visible,
+.nav-link-glass:focus-within,
+.nav-link-glass:visited,
+.nav-link-glass:target {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    animation: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.nav-link-glass::after,
+.nav-link-glass:hover::after,
+.nav-link-glass:focus::after,
+.nav-link-glass:active::after {
+    display: none !important;
+    content: none !important;
+    opacity: 0 !important;
+}
+
+a.nav-link-glass,
+a.nav-link-glass:hover,
+a.nav-link-glass:focus,
+a.nav-link-glass:active,
+a.nav-link-glass:visited {
+    outline: none !important;
+    animation: none !important;
+    text-decoration: none !important;
+    border-radius: 20px !important; /* Fixed border-radius */
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+}
+
+.nav-link-glass::-moz-focus-inner {
+    border: 0 !important;
+    outline: none !important;
+}
+
+.nav-link-glass::-webkit-focus-ring-color {
+    outline-color: transparent !important;
+}
+
+/* Removed all color adaptation system - single state only */
+
+/* Smooth transitions for all color changes */
+/* Removed dynamic background variations - single state only */
+
+/* Smooth transitions for some elements (excluding nav links) */
+.glass-header,
+.glass-header h1,
+.glass-header .btn-primary-glass,
+.glass-header .glass-logo-container,
+.glass-header .glass-menu-btn,
+.glass-header .glass-menu-btn span {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* No transitions for navigation links */
+.glass-header .nav-link-glass,
+.glass-header .mobile-nav-link {
+    transition: none !important;
+}
+
+/* Force border-radius for all possible states and prevent any changes */
+.nav-link-glass:active,
+.nav-link-glass:focus,
+.nav-link-glass:focus-visible,
+.nav-link-glass:focus-within,
+.nav-link-glass:-webkit-any-link:active,
+.nav-link-glass:-moz-any-link:active,
+.nav-link-glass:any-link:active,
+button.nav-link-glass:active,
+button.nav-link-glass:focus,
+.nav-link-glass[data-state="active"],
+.nav-link-glass[aria-pressed="true"],
+.nav-link-glass:target,
+*:active > .nav-link-glass,
+*:focus > .nav-link-glass {
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+/* Keep header always visible */
+.glass-header.hidden {
+    transform: translateY(0);
+}
+
+/* Remove body padding */
+body {
+    padding-top: 0;
+}
+
+#hero-placeholder {
+    padding-top: 80px;
+}
+
+/* Loading state */
+.glass-header.loading {
+    opacity: 0.8;
+}
+
+.glass-header.loading .glass-logo-container {
+    animation: liquidPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes liquidPulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+    .glass-header {
+        margin: 8px 12px 0 12px;
+        min-height: 56px;
+        max-height: 60px;
+    }
+    
+    .glass-header nav {
+        padding: 6px 0;
+        min-height: 52px;
+        max-height: 56px;
+    }
+    
+    .glass-logo-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+    }
+    
+    .btn-primary-glass {
+        padding: 7px 16px;
+        font-size: 12px;
+        border-radius: 24px;
+    }
+    
+    #hero-placeholder {
+        padding-top: 68px;
+    }
+}
+
+@media (max-width: 640px) {
+    .glass-header {
+        margin: 6px 12px 0 12px;
+        border-radius: 20px;
+        min-height: 52px;
+        max-height: 56px;
+    }
+    
+    .glass-header nav {
+        padding: 4px 0;
+        min-height: 48px;
+        max-height: 52px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
+    .glass-logo-container {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+    }
+    
+    .glass-logo-container img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .glass-header h1 {
+        font-size: 1rem;
+    }
+    
+    .btn-primary-glass {
+        padding: 6px 14px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+    
+    .glass-menu-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+    }
+    
+    #hero-placeholder {
+        padding-top: 58px;
+    }
+}
+
+/* Remove focus states - no visual changes on focus/active */
+.nav-link-glass:focus,
+.nav-link-glass:active,
+.glass-menu-btn:focus,
+.glass-menu-btn:active,
+.mobile-nav-link:focus,
+.mobile-nav-link:active,
+.btn-primary-glass:focus,
+.btn-primary-glass:active {
+    outline: none !important;
+    border-radius: 20px !important; /* Fixed border-radius for nav links */
+}
+
+/* Ensure border-radius stays fixed for all states */
+.nav-link-glass:focus,
+.nav-link-glass:focus-visible,
+.nav-link-glass:focus-within {
+    border-radius: 20px !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: none !important;
+}
+
+/* Active state overrides focus state */
+.nav-link-glass:active,
+.nav-link-glass.active {
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+.btn-primary-glass:focus {
+    border-radius: 32px !important;
+    outline: none !important;
+}
+
+/* Active state overrides focus state for Get Started button */
+.btn-primary-glass:active {
+    border-radius: 32px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: scale(0.95);
+}
+
+.mobile-nav-link:focus {
+    border-radius: 18px !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Active state overrides focus state for mobile links */
+.mobile-nav-link:active,
+.mobile-nav-link.active {
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .glass-header {
+        background: rgba(0, 0, 0, 0.9);
+        border: 2px solid white;
+    }
+    
+    .nav-link-glass {
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .glass-logo-container {
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid white;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .glass-header,
+    .nav-link-glass,
+    .glass-logo-container,
+    .glass-menu-btn,
+    .glass-header::before,
+    .glass-header::after,
+    .glass-reflection {
+        animation: none !important;
+        transition: none;
+    }
+} 

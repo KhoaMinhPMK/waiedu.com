@@ -1,0 +1,893 @@
+/* Hero Section Styles */
+#hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 25%, #e8f4f8 75%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Animated background blobs */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Main animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-slide-up {
+    animation: slide-up 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+    opacity: 0;
+}
+
+/* Badge animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+}
+
+/* Button effects */
+.group:hover .absolute {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Hero image animations */
+#hero .logo {
+    filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.15));
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#hero .logo:hover {
+    filter: drop-shadow(0 30px 60px rgba(59, 130, 246, 0.25));
+}
+
+/* Glassmorphism effects */
+.bg-white\/20 {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bg-white\/50 {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.bg-white\/80 {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.border-white\/30 {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Gradient text */
+.bg-clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.text-transparent {
+    color: transparent;
+}
+
+/* Enhanced bounce animation for scroll indicator */
+.animate-bounce {
+    animation: enhanced-bounce 2s infinite;
+}
+
+@keyframes enhanced-bounce {
+    0%, 20%, 53%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40%, 43% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    70% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+    90% {
+        transform: translateX(-50%) translateY(-2px);
+    }
+}
+
+/* Stats hover effects */
+.text-center:hover .text-2xl {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animate-blob {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .animate-float {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Hero Glass Styles */
+.hero-glass {
+    background: linear-gradient(
+        135deg,
+        rgba(30, 58, 138, 0.9) 0%,
+        rgba(79, 70, 229, 0.8) 25%,
+        rgba(129, 140, 248, 0.7) 50%,
+        rgba(165, 180, 252, 0.6) 75%,
+        rgba(199, 210, 254, 0.5) 100%
+    );
+    position: relative;
+    overflow: hidden;
+    padding-top: 0; /* Remove padding, use body padding instead */
+}
+
+.hero-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Floating Orbs */
+.floating-orbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.orb-3 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+.orb-4 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 25%;
+    animation-delay: 1s;
+}
+
+/* Grid Pattern */
+.grid-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* Glass Badge */
+.glass-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+/* Hero Typography */
+.hero-title {
+    margin: 0;
+    line-height: 1.1;
+}
+
+.text-gradient-hero {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.9) 25%,
+        rgba(99, 102, 241, 0.9) 50%,
+        rgba(139, 92, 246, 0.9) 75%,
+        rgba(236, 72, 153, 0.9) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    letter-spacing: -0.02em;
+    margin-top: 30px; /* Move WAIEDU text down by 30px total */
+}
+
+.text-gradient-accent {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 540px;
+    font-weight: 400;
+}
+
+/* Glass Statistics */
+.glass-stats {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+}
+
+/* Hero Buttons */
+.btn-hero-primary {
+    padding: 18px 36px;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 8px 32px rgba(59, 130, 246, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(59, 130, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-secondary {
+    padding: 18px 36px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: none;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Comprehensive override to eliminate ALL possible border/outline effects for hero buttons */
+.btn-hero-primary,
+.btn-hero-secondary {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    border: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    box-shadow-outline: none !important;
+}
+
+/* Focus states without any border/outline animation */
+.btn-hero-primary:focus,
+.btn-hero-primary:focus-visible,
+.btn-hero-primary:focus-within,
+.btn-hero-primary:active,
+.btn-hero-primary:focus:active,
+.btn-hero-primary:active:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    border: none !important;
+    border-radius: 16px !important; /* Maintain stable border-radius */
+    animation: none !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 40px rgba(59, 130, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-secondary:focus,
+.btn-hero-secondary:focus-visible,
+.btn-hero-secondary:focus-within,
+.btn-hero-secondary:active,
+.btn-hero-secondary:focus:active,
+.btn-hero-secondary:active:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    border: none !important;
+    border-radius: 16px !important; /* Maintain stable border-radius */
+    animation: none !important;
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Remove browser default focus behaviors */
+.btn-hero-primary::-moz-focus-inner,
+.btn-hero-secondary::-moz-focus-inner {
+    border: 0 !important;
+    outline: none !important;
+}
+
+.btn-hero-primary::-webkit-focus-ring-color,
+.btn-hero-secondary::-webkit-focus-ring-color {
+    outline-color: transparent !important;
+}
+
+/* Override any external CSS framework classes */
+.btn-hero-primary.focus-ring,
+.btn-hero-primary.focus\:ring-2,
+.btn-hero-primary.focus\:ring-primary-500,
+.btn-hero-primary.focus\:ring-offset-2,
+.btn-hero-primary.focus\:outline-none,
+.btn-hero-secondary.focus-ring,
+.btn-hero-secondary.focus\:ring-2,
+.btn-hero-secondary.focus\:ring-primary-500,
+.btn-hero-secondary.focus\:ring-offset-2,
+.btn-hero-secondary.focus\:outline-none,
+button.btn-hero-primary:focus,
+button.btn-hero-secondary:focus,
+input.btn-hero-primary:focus,
+input.btn-hero-secondary:focus,
+.btn-hero-primary[tabindex]:focus,
+.btn-hero-secondary[tabindex]:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    border: none !important;
+    border-radius: 16px !important;
+    animation: none !important;
+    box-shadow-outline: none !important;
+    ring: none !important;
+    ring-color: transparent !important;
+    ring-offset: 0 !important;
+    ring-width: 0 !important;
+}
+
+/* Final safety override - eliminate ANY possible border/outline effects */
+.btn-hero-primary[class*="focus"],
+.btn-hero-primary[class*="ring"],
+.btn-hero-primary[class*="outline"],
+.btn-hero-secondary[class*="focus"],
+.btn-hero-secondary[class*="ring"],
+.btn-hero-secondary[class*="outline"] {
+    outline: none !important;
+    border: none !important;
+    border-radius: 16px !important;
+    animation: none !important;
+}
+
+/* Glass Frame for Image */
+.glass-frame {
+    position: relative;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.glass-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-frame-inner {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.hero-image {
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    width: 75%; /* Further reduce image size */
+    height: auto;
+    margin: 0 auto;
+}
+
+.glass-frame:hover .hero-image {
+    transform: scale(1.02);
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    z-index: 10;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-element-1 {
+    top: 10%;
+    right: -10%;
+    animation-delay: 0s;
+}
+
+.floating-element-2 {
+    bottom: 20%;
+    left: -8%;
+    animation-delay: 1s;
+}
+
+.floating-element-3 {
+    top: 50%;
+    right: -12%;
+    animation-delay: 2s;
+}
+
+.mini-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative Rings */
+.decorative-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ring {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.ring-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
+}
+
+.ring-2 {
+    width: 450px;
+    height: 450px;
+    top: -225px;
+    left: -225px;
+    animation-direction: reverse;
+    animation-duration: 30s;
+}
+
+.ring-3 {
+    width: 600px;
+    height: 600px;
+    top: -300px;
+    left: -300px;
+    animation-duration: 40s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll Indicator - Circular Button at Bottom Right */
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    z-index: 20;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll-button {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: float-gentle 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.scroll-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.scroll-arrow {
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    transform: rotate(45deg);
+    animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+.scroll-text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover .scroll-text {
+    opacity: 1;
+}
+
+@keyframes float-gentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes bounce-arrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: rotate(45deg) translateY(0);
+    }
+    40% {
+        transform: rotate(45deg) translateY(2px);
+    }
+    60% {
+        transform: rotate(45deg) translateY(1px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+    .hero-glass {
+        padding-top: 0;
+        text-align: center;
+    }
+    
+    .glass-stats {
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .floating-element {
+        display: none;
+    }
+    
+    .decorative-rings {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-glass {
+        padding-top: 0;
+        min-height: 100vh;
+    }
+    
+    .text-gradient-hero {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .glass-stats {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+        margin-top: 1.5rem;
+    }
+    
+    .stat-divider {
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent
+        );
+    }
+    
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+    
+    .glass-frame {
+        padding: 16px;
+        margin-top: 32px;
+    }
+    
+    .hero-image {
+        width: 90%; /* Slightly larger on mobile for better visibility */
+    }
+    
+    .orb {
+        display: none;
+    }
+    
+    .scroll-indicator {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .scroll-button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .scroll-arrow {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .scroll-text {
+        bottom: -25px;
+        font-size: 0.7rem;
+    }
+}
+
+/* High performance optimizations */
+.hero-glass * {
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-orbs,
+    .decorative-rings,
+    .scroll-indicator,
+    .pulse-dot {
+        animation: none;
+    }
+    
+    .floating-element {
+        position: static;
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-glass {
+        background: white;
+        color: black;
+        min-height: auto;
+    }
+    
+    .floating-orbs,
+    .grid-pattern,
+    .decorative-rings,
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .glass-badge,
+    .glass-stats,
+    .glass-frame {
+        background: white;
+        border: 1px solid #ccc;
+        backdrop-filter: none;
+    }
+} 
