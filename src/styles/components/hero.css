@@ -1,6 +1,7 @@
 /* Hero Section Styles */
 #hero {
-    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 25%, #e8f4f8 75%, #f1f5f9 100%);
+    /* Deep dark tone gradient */
+    background: linear-gradient(135deg, #64748b 0%, #475569 25%, #334155 75%, #1e293b 100%);
     position: relative;
     overflow: hidden;
     min-height: 100vh;

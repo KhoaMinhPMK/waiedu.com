@@ -406,15 +406,17 @@ header.glass-header {
     transition: all 0.15s ease !important;
 }
 
-/* Persistent active state for selected navigation link */
+/* Active state for selected navigation link - white background, black text */
 .nav-link-glass.active {
     background: rgba(255, 255, 255, 0.95) !important;
     color: rgba(0, 0, 0, 0.9) !important;
-    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    border: 0.5px solid rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(15px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(180%) !important;
     box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-    transform: none;
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+    transform: none !important;
     transition: all 0.2s ease !important;
 }
 
@@ -889,4 +891,17 @@ body {
         animation: none !important;
         transition: none;
     }
+}
+
+/* Ensure active nav link appears with white background and black text */
+a.nav-link-glass.active,
+.nav-link-glass.active,
+.mobile-nav-link.active,
+a.nav-link-glass.active:hover,
+a.nav-link-glass.active:focus {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: rgba(0, 0, 0, 0.9) !important;
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
 } 
