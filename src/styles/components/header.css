@@ -891,7 +891,7 @@ body {
         animation: none !important;
         transition: none;
     }
-}
+} 
 
 /* Ensure active nav link appears with white background and black text */
 a.nav-link-glass.active,
@@ -904,4 +904,15 @@ a.nav-link-glass.active:focus {
     border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Highest priority: active link inside header */
+.glass-header a.nav-link-glass.active,
+.glass-header .nav-link-glass.active,
+.glass-header a.nav-link-glass.active:hover,
+.glass-header a.nav-link-glass.active:focus {
+    background: #ffffff !important;
+    color: #111827 !important; /* slate-900 */
+    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
 } 

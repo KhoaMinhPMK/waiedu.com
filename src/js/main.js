@@ -415,6 +415,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initAllInteractions()
 })
 
+// Re-initialize nav highlighting after components (header) are loaded
+const waitForHeaderLinks = setInterval(() => {
+  const links = document.querySelectorAll('.nav-link-glass');
+  if (links.length) {
+    clearInterval(waitForHeaderLinks);
+    // Re-attach navigation handlers only once
+    initNavigationEffects();
+    initSectionObserver();
+  }
+}, 300);
+
 // Performance optimization
 const performanceOptimizations = {
   initLazyLoading() {
@@ -484,8 +495,8 @@ function initHeaderColorChange() {
 function initSectionObserver() {
     // Create an intersection observer to track which section is in view
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link-glass, .mobile-nav-link');
-    
+    const linksSelector = '.nav-link-glass, .mobile-nav-link';
+ 
     const observerOptions = {
         root: null,
         rootMargin: '-20% 0px -60% 0px', // Trigger when section is well visible
@@ -511,12 +522,12 @@ function initSectionObserver() {
         // Only update if we have a clear current section
         if (currentSection) {
             // Remove active class from all nav links
-            navLinks.forEach(link => {
+            document.querySelectorAll(linksSelector).forEach(link => {
                 link.classList.remove('active');
             });
             
             // Add active class to corresponding nav link
-            const activeLink = document.querySelector(`a[href="#${currentSection}"]`);
+            const activeLink = Array.from(document.querySelectorAll(linksSelector)).find(link => link.getAttribute('href') === `#${currentSection}`);
             if (activeLink) {
                 activeLink.classList.add('active');
             }
