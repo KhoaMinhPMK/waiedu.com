@@ -9,15 +9,18 @@
                 </div>
                 <h1 class="text-xl font-bold text-white tracking-tight">WAIEDU</h1>
             </div>            <!-- Desktop Navigation -->
-            <div class="hidden lg:flex items-center space-x-8">
-                <a href="#hero" class="nav-link-glass">Home</a>
-                <a href="#about" class="nav-link-glass">About us</a>
-                <a href="#solution" class="nav-link-glass">Solution</a>
-                <a href="#product-intro" class="nav-link-glass">Product</a>
-                <a href="#competition" class="nav-link-glass">Competition</a>
-                <a href="#blog" class="nav-link-glass">Blog</a>
-                <a href="#download" class="nav-link-glass">Download</a>
-                <a href="#contact" class="nav-link-glass">Contact</a>
+            <div class="hidden lg:flex items-center space-x-8 relative" id="desktop-nav">
+                <!-- Sliding indicator -->
+                <div id="nav-indicator" class="absolute h-full w-0 bg-white/10 rounded-lg transition-all duration-500 pointer-events-none"></div>
+                
+                <a href="#hero" class="nav-link-glass nav-item" data-section="hero">Home</a>
+                <a href="#about" class="nav-link-glass nav-item" data-section="about">About us</a>
+                <a href="#solution" class="nav-link-glass nav-item" data-section="solution">Solution</a>
+                <a href="#product-intro" class="nav-link-glass nav-item" data-section="product-intro">Product</a>
+                <a href="#competition" class="nav-link-glass nav-item" data-section="competition">Competition</a>
+                <a href="#blog" class="nav-link-glass nav-item" data-section="blog">Blog</a>
+                <a href="#download" class="nav-link-glass nav-item" data-section="download">Download</a>
+                <a href="#contact" class="nav-link-glass nav-item" data-section="contact">Contact</a>
             </div><!-- CTA Button -->
             <div class="hidden lg:block">
                 <button class="btn-primary-glass px-3 py-1 text-sm">
@@ -34,23 +37,1020 @@
                     <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
                 </div>
             </button>
-        </nav>        <!-- Mobile Menu -->
-        <div class="lg:hidden mobile-menu-glass hidden" id="mobile-menu">
-            <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#hero" class="mobile-nav-link">Home</a>
-                <a href="#about" class="mobile-nav-link">About us</a>
-                <a href="#solution" class="mobile-nav-link">Solution</a>
-                <a href="#product-intro" class="mobile-nav-link">Product</a>
-                <a href="#competition" class="mobile-nav-link">Competition</a>
-                <a href="#blog" class="mobile-nav-link">Blog</a>
-                <a href="#download" class="mobile-nav-link">Download</a>
-                <a href="#contact" class="mobile-nav-link">Contact</a><div class="pt-4">
-                    <button class="btn-primary-glass w-full px-3 py-1 text-sm">Get Started</button>
-                </div>
-            </div>
-        </div>
+        </nav>                    
     </div>
 
     <!-- Glass reflection effect -->
     <div class="glass-reflection"></div>
-</header> 
+</header>
+
+<!-- Modern Glassmorphism Mobile Menu -->
+<div class="lg:hidden mobile-menu-overlay hidden" id="mobile-menu">
+    <!-- Backdrop with blur effect -->
+    <div class="mobile-menu-backdrop"></div>
+    
+    <!-- Main menu container -->
+    <div class="mobile-menu-container">
+        <!-- Header section with logo and close button -->
+        <div class="mobile-menu-header">
+            <div class="flex items-center space-x-3">
+                <div class="mobile-logo-glow">
+                    <img src="./assets/logo.svg" alt="WAIEDU" class="w-10 h-10 object-contain" />
+                </div>
+                <span class="mobile-brand-text">WAIEDU</span>
+            </div>
+            <button class="mobile-close-btn" id="mobile-close-btn">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Navigation links -->
+        <nav class="mobile-nav-section">
+            <div class="mobile-nav-grid">
+                <a href="#hero" class="mobile-nav-card" data-section="hero">
+                    <div class="mobile-nav-icon">🏠</div>
+                    <span class="mobile-nav-text">Home</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#about" class="mobile-nav-card" data-section="about">
+                    <div class="mobile-nav-icon">👥</div>
+                    <span class="mobile-nav-text">About us</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#solution" class="mobile-nav-card" data-section="solution">
+                    <div class="mobile-nav-icon">💡</div>
+                    <span class="mobile-nav-text">Solution</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#product-intro" class="mobile-nav-card" data-section="product-intro">
+                    <div class="mobile-nav-icon">📱</div>
+                    <span class="mobile-nav-text">Product</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#competition" class="mobile-nav-card" data-section="competition">
+                    <div class="mobile-nav-icon">🏆</div>
+                    <span class="mobile-nav-text">Competition</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#blog" class="mobile-nav-card" data-section="blog">
+                    <div class="mobile-nav-icon">📝</div>
+                    <span class="mobile-nav-text">Blog</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#download" class="mobile-nav-card" data-section="download">
+                    <div class="mobile-nav-icon">⬇️</div>
+                    <span class="mobile-nav-text">Download</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+                
+                <a href="#contact" class="mobile-nav-card" data-section="contact">
+                    <div class="mobile-nav-icon">📞</div>
+                    <span class="mobile-nav-text">Contact</span>
+                    <div class="mobile-nav-arrow">→</div>
+                </a>
+            </div>
+        </nav>
+        
+        <!-- CTA Section -->
+        <div class="mobile-cta-section">
+            <button class="mobile-cta-button">
+                <span class="mobile-cta-text">Get Started</span>
+                <div class="mobile-cta-glow"></div>
+            </button>
+            
+            <!-- Quick links -->
+            <div class="mobile-quick-links">
+                <a href="#" class="mobile-quick-link">
+                    <span>📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="mobile-quick-link">
+                    <span>📞</span>
+                    <span>Call</span>
+                </a>
+                <a href="#" class="mobile-quick-link">
+                    <span>💬</span>
+                    <span>Chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* CSS cho active state và hiệu ứng chuyển tiếp */
+    .nav-link-glass {
+        position: relative;
+        transition: all 0.3s ease;
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 0.25rem;
+    }
+    
+    .nav-link-glass::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+        opacity: 0;
+    }
+    
+    .nav-link-glass:hover {
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .nav-link-glass:hover::after {
+        width: 30%;
+        opacity: 0.7;
+    }
+    
+    .nav-link-glass.active {
+        color: white;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    
+    .nav-link-glass.active::after {
+        width: 70%;
+        opacity: 1;
+    }
+    
+    .mobile-nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        transition: all 0.3s ease;
+        color: rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+    }
+    
+    .mobile-nav-link.active {
+        color: white;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* ======================================================== */
+    /* MODERN GLASSMORPHISM MOBILE MENU */
+    /* ======================================================== */
+    
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .mobile-menu-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Backdrop with blur */
+    .mobile-menu-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    /* Main menu container - Full screen with proper scroll */
+    .mobile-menu-container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0.06) 100%
+        );
+        backdrop-filter: blur(40px) saturate(180%);
+        -webkit-backdrop-filter: blur(40px) saturate(180%);
+        border: none;
+        box-shadow: none;
+        transform: translateY(-100%);
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        /* iOS scroll fix */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mobile-menu-overlay.show .mobile-menu-container {
+        transform: translateY(0);
+    }
+    
+    /* Header section - Full width */
+    .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 2rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(255, 255, 255, 0.04) 100%
+        );
+    }
+    
+    .mobile-logo-glow {
+        padding: 0.5rem;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(99, 102, 241, 0.2));
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+    }
+    
+    .mobile-brand-text {
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        letter-spacing: -0.025em;
+    }
+    
+    .mobile-close-btn {
+        padding: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        color: white;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        z-index: 10000;
+        position: relative;
+        pointer-events: auto;
+    }
+    
+    .mobile-close-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Navigation section - Scrollable with padding */
+    .mobile-nav-section {
+        flex: 1;
+        padding: 1rem 2rem 2rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 0;
+        /* iOS scroll fix */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mobile-nav-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+        max-width: 600px;
+        padding: 1rem 0;
+    }
+    
+    /* Navigation cards - Grid layout */
+    .mobile-nav-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.5rem;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0.06) 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        text-decoration: none;
+        color: white;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        aspect-ratio: 1;
+        min-height: 120px;
+    }
+    
+    .mobile-nav-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent
+        );
+        transition: left 0.5s ease;
+    }
+    
+    .mobile-nav-card:hover::before {
+        left: 100%;
+    }
+    
+    .mobile-nav-card:hover {
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.08) 100%
+        );
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .mobile-nav-card.active {
+        background: linear-gradient(
+            135deg,
+            rgba(59, 130, 246, 0.2) 0%,
+            rgba(99, 102, 241, 0.15) 100%
+        );
+        border-color: rgba(59, 130, 246, 0.3);
+        box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+    }
+    
+    .mobile-nav-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
+    
+    .mobile-nav-text {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .mobile-nav-arrow {
+        font-size: 1.2rem;
+        opacity: 0.4;
+        transition: all 0.3s ease;
+        transform: translateY(5px);
+    }
+    
+    .mobile-nav-card:hover .mobile-nav-arrow {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* CTA Section - Full width */
+    .mobile-cta-section {
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08) 0%,
+            rgba(255, 255, 255, 0.04) 100%
+        );
+        backdrop-filter: blur(10px);
+    }
+    
+    .mobile-cta-button {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 1.25rem 2rem;
+        background: linear-gradient(
+            135deg,
+            #3b82f6 0%,
+            #6366f1 50%,
+            #8b5cf6 100%
+        );
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+        box-shadow: 
+            0 6px 25px rgba(59, 130, 246, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        display: block;
+    }
+    
+    .mobile-cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 
+            0 10px 35px rgba(59, 130, 246, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    
+    .mobile-cta-glow {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+        );
+        transition: left 0.6s ease;
+    }
+    
+    .mobile-cta-button:hover .mobile-cta-glow {
+        left: 100%;
+    }
+    
+    .mobile-cta-text {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* Quick links - Centered */
+    .mobile-quick-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        gap: 1rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .mobile-quick-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75rem 0.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.75rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        flex: 1;
+        backdrop-filter: blur(10px);
+    }
+    
+    .mobile-quick-link:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .mobile-quick-link span:first-child {
+        font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    /* Animation delays for staggered appearance */
+    .mobile-nav-card:nth-child(1) { animation-delay: 0.1s; }
+    .mobile-nav-card:nth-child(2) { animation-delay: 0.15s; }
+    .mobile-nav-card:nth-child(3) { animation-delay: 0.2s; }
+    .mobile-nav-card:nth-child(4) { animation-delay: 0.25s; }
+    .mobile-nav-card:nth-child(5) { animation-delay: 0.3s; }
+    .mobile-nav-card:nth-child(6) { animation-delay: 0.35s; }
+    .mobile-nav-card:nth-child(7) { animation-delay: 0.4s; }
+    .mobile-nav-card:nth-child(8) { animation-delay: 0.45s; }
+    
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+        .mobile-menu-header {
+            padding: 1.5rem 1.5rem 1rem;
+        }
+        
+        .mobile-nav-section {
+            padding: 1rem 1.5rem 1.5rem;
+        }
+        
+        .mobile-nav-grid {
+            gap: 0.75rem;
+            max-width: none;
+        }
+        
+        .mobile-nav-card {
+            padding: 1.5rem 1rem;
+            min-height: 100px;
+        }
+        
+        .mobile-nav-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mobile-nav-text {
+            font-size: 0.8rem;
+        }
+        
+        .mobile-cta-section {
+            padding: 1.5rem;
+        }
+        
+        .mobile-cta-button {
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 360px) {
+        .mobile-menu-header {
+            padding: 1rem 1rem 0.75rem;
+        }
+        
+        .mobile-nav-section {
+            padding: 0.75rem 1rem 1rem;
+        }
+        
+        .mobile-nav-grid {
+            gap: 0.5rem;
+        }
+        
+        .mobile-nav-card {
+            padding: 1.25rem 0.75rem;
+            min-height: 90px;
+        }
+        
+        .mobile-nav-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .mobile-nav-text {
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .mobile-nav-arrow {
+            font-size: 1rem;
+        }
+        
+        .mobile-cta-section {
+            padding: 1rem;
+        }
+        
+        .mobile-quick-links {
+            gap: 0.5rem;
+        }
+        
+        .mobile-quick-link {
+            padding: 0.5rem 0.25rem;
+            font-size: 0.7rem;
+        }
+    }
+    
+    /* Ensure all interactive elements are clickable */
+    .mobile-menu-overlay * {
+        pointer-events: auto;
+    }
+    
+    .mobile-menu-backdrop {
+        pointer-events: auto;
+    }
+    
+    .mobile-close-btn,
+    .mobile-nav-card,
+    .mobile-cta-button,
+    .mobile-quick-link {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+    
+    /* Fix any potential z-index issues */
+    .mobile-menu-header {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .mobile-close-btn {
+        position: relative;
+        z-index: 1001;
+    }
+    
+    #nav-indicator {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 38px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3));
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        opacity: 0.8;
+    }
+</style>
+
+<!-- JavaScript cho header active và hiệu ứng chuyển tiếp -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(initHeaderNavigation, 1000);
+    });
+    
+    function initHeaderNavigation() {
+        console.log("Khởi tạo header navigation...");
+        
+        // Lấy tất cả các nav item và section
+        const navItems = document.querySelectorAll('.nav-item');
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-link');
+        const navIndicator = document.getElementById('nav-indicator');
+        
+        // Biến lưu trạng thái
+        let activeNavIndex = 0;
+        
+        // Lấy tất cả các section dựa trên data-section của nav items
+        const sections = [];
+        navItems.forEach(item => {
+            const sectionId = item.getAttribute('data-section');
+            const section = document.getElementById(sectionId);
+            if (section) {
+                sections.push({
+                    id: sectionId,
+                    element: section
+                });
+                console.log(`Đã tìm thấy section: ${sectionId}`);
+            } else {
+                console.warn(`Không tìm thấy section với id: ${sectionId}`);
+            }
+        });
+        
+        // Hàm cập nhật active nav
+        function setActiveNav(index) {
+            if (index === activeNavIndex) return;
+            
+            const oldIndex = activeNavIndex;
+            activeNavIndex = index;
+            
+            // Cập nhật class active
+            navItems.forEach(item => item.classList.remove('active'));
+            mobileNavItems.forEach(item => item.classList.remove('active'));
+            
+            navItems[index].classList.add('active');
+            if (index < mobileNavItems.length) {
+                mobileNavItems[index].classList.add('active');
+            }
+            
+            // Cập nhật indicator
+            updateIndicator(oldIndex, index);
+        }
+        
+        // Hàm cập nhật indicator
+        function updateIndicator(fromIndex, toIndex) {
+            if (!navIndicator) return;
+            
+            const navBar = document.getElementById('desktop-nav');
+            if (!navBar) return;
+            
+            const fromItem = navItems[fromIndex];
+            const toItem = navItems[toIndex];
+            
+            if (!fromItem || !toItem) return;
+            
+            const fromRect = fromItem.getBoundingClientRect();
+            const toRect = toItem.getBoundingClientRect();
+            const navRect = navBar.getBoundingClientRect();
+            
+            const fromLeft = fromRect.left - navRect.left;
+            const toLeft = toRect.left - navRect.left;
+            
+            // Hiệu ứng flash khi chuyển đổi
+            navIndicator.style.boxShadow = '0 0 25px rgba(255, 255, 255, 0.8)';
+            navIndicator.style.opacity = '1';
+            
+            setTimeout(() => {
+                navIndicator.style.boxShadow = '0 0 15px rgba(255, 255, 255, 0.3)';
+                navIndicator.style.opacity = '0.8';
+            }, 600);
+            
+            // Animation chuyển tiếp
+            const distance = Math.abs(fromLeft - toLeft);
+            const direction = fromLeft < toLeft ? 1 : -1;
+            
+            if (direction > 0) {
+                // Di chuyển sang phải
+                navIndicator.style.left = `${fromLeft}px`;
+                navIndicator.style.width = `${distance + toRect.width}px`;
+                
+                setTimeout(() => {
+                    navIndicator.style.left = `${toLeft}px`;
+                    navIndicator.style.width = `${toRect.width}px`;
+                }, 300);
+            } else {
+                // Di chuyển sang trái
+                navIndicator.style.left = `${toLeft}px`;
+                navIndicator.style.width = `${distance + fromRect.width}px`;
+                
+                setTimeout(() => {
+                    navIndicator.style.left = `${toLeft}px`;
+                    navIndicator.style.width = `${toRect.width}px`;
+                }, 300);
+            }
+        }
+        
+        // Khởi tạo indicator
+        function initIndicator() {
+            if (!navIndicator || navItems.length === 0) return;
+            
+            const activeItem = navItems[activeNavIndex];
+            const navBar = document.getElementById('desktop-nav');
+            
+            if (navBar && activeItem) {
+                const itemRect = activeItem.getBoundingClientRect();
+                const navRect = navBar.getBoundingClientRect();
+                
+                navIndicator.style.opacity = '0';
+                navIndicator.style.left = `${itemRect.left - navRect.left}px`;
+                navIndicator.style.width = `${itemRect.width}px`;
+                
+                setTimeout(() => {
+                    navIndicator.style.opacity = '0.8';
+                }, 200);
+            }
+        }
+        
+        // Xử lý sự kiện scroll
+        function handleScroll() {
+            const scrollPosition = window.scrollY + window.innerHeight / 3;
+            
+            // Tìm section hiện tại
+            let currentSectionIndex = -1;
+            
+            sections.forEach((section, index) => {
+                const element = section.element;
+                const rect = element.getBoundingClientRect();
+                const absoluteTop = rect.top + window.scrollY;
+                const absoluteBottom = absoluteTop + rect.height;
+                
+                // Kiểm tra xem scrollPosition có nằm trong section không
+                if (scrollPosition >= absoluteTop && scrollPosition <= absoluteBottom) {
+                    currentSectionIndex = index;
+                }
+            });
+            
+            // Nếu tìm thấy section, cập nhật active nav
+            if (currentSectionIndex !== -1) {
+                setActiveNav(currentSectionIndex);
+            }
+        }
+        
+        // Xử lý sự kiện click cho nav items
+        navItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                setActiveNav(index);
+            });
+        });
+        
+        // Xử lý sự kiện click cho mobile nav items
+        mobileNavItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                setActiveNav(index);
+            });
+        });
+        
+        // Khởi tạo
+        initIndicator();
+        handleScroll(); // Kiểm tra ngay lập tức
+        
+        // Thêm sự kiện scroll với throttle
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) return;
+            
+            scrollTimeout = setTimeout(() => {
+                handleScroll();
+                scrollTimeout = null;
+            }, 100);
+        });
+        
+        // Cập nhật khi resize
+        window.addEventListener('resize', () => {
+            initIndicator();
+        });
+        
+        console.log("Đã hoàn tất khởi tạo header navigation");
+    }
+</script>
+
+<script>
+// Modern Mobile Menu Controller - Add to existing scripts
+document.addEventListener('DOMContentLoaded', function() {
+    initModernMobileMenu();
+});
+
+function initModernMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileMenuBackdrop = document.querySelector('.mobile-menu-backdrop');
+    const mobileNavCards = document.querySelectorAll('.mobile-nav-card');
+    
+    if (!mobileMenuBtn || !mobileMenu) {
+        console.warn('Mobile menu elements not found');
+        return;
+    }
+    
+    console.log('Mobile menu elements found:', { 
+        mobileMenuBtn: !!mobileMenuBtn, 
+        mobileMenu: !!mobileMenu, 
+        mobileCloseBtn: !!mobileCloseBtn 
+    });
+    
+    // Animate hamburger to X
+    function toggleHamburger(isOpen) {
+        const spans = mobileMenuBtn.querySelectorAll('span:not(.sr-only)');
+        if (isOpen) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = '';
+        }
+    }
+    
+    // Open menu
+    function openMenu() {
+        console.log('Opening mobile menu...');
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+            mobileMenu.classList.add('show');
+            toggleHamburger(true);
+            
+            // Stagger animation for nav cards
+            mobileNavCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateX(30px)';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.3s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateX(0)';
+                    }, 50);
+                }, index * 50);
+            });
+        }, 10);
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Close menu
+    function closeMenu() {
+        console.log('Closing mobile menu...');
+        mobileMenu.classList.remove('show');
+        toggleHamburger(false);
+        
+        setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 500);
+    }
+    
+    // Event listeners with proper error handling
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile menu button clicked');
+            openMenu();
+        });
+    }
+    
+    if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile close button clicked');
+            closeMenu();
+        });
+    }
+    
+    if (mobileMenuBackdrop) {
+        mobileMenuBackdrop.addEventListener('click', function(e) {
+            if (e.target === mobileMenuBackdrop) {
+                console.log('Mobile backdrop clicked');
+                closeMenu();
+            }
+        });
+    }
+    
+    // Handle navigation clicks
+    mobileNavCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Remove active from all cards
+            mobileNavCards.forEach(c => c.classList.remove('active'));
+            
+            // Add active to clicked card
+            this.classList.add('active');
+            
+            // Handle smooth scrolling
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    const headerHeight = 80;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    // Close menu first
+                    closeMenu();
+                    
+                    // Then scroll after menu closes
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }, 200);
+                }
+            }
+        });
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('show')) {
+            closeMenu();
+        }
+    });
+    
+    // Update active state based on current section
+    function updateMobileActiveState() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 100;
+        
+        let currentSection = null;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSection = section.id;
+            }
+        });
+        
+        if (currentSection) {
+            mobileNavCards.forEach(card => {
+                card.classList.remove('active');
+                const cardSection = card.getAttribute('data-section');
+                if (cardSection === currentSection) {
+                    card.classList.add('active');
+                }
+            });
+        }
+    }
+    
+    // Listen to scroll for active state
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateMobileActiveState, 100);
+    });
+    
+    // Set initial active state
+    setTimeout(updateMobileActiveState, 500);
+}
+</script>

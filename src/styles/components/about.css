@@ -10,6 +10,417 @@
     background-size: 20px 20px;
 }
 
+/* ======================================================== */
+/* RESPONSIVE DESIGN FOR ABOUT SECTION */
+/* ======================================================== */
+
+/* Mobile-first responsive typography */
+@media (max-width: 640px) {
+    #about {
+        padding: 3rem 0 4rem;
+    }
+    
+    /* Section header responsive */
+    #about .text-5xl {
+        font-size: 2.25rem !important; /* text-4xl */
+        line-height: 1.1 !important;
+    }
+    
+    #about .lg\\:text-7xl {
+        font-size: 2.25rem !important;
+    }
+    
+    #about .xl\\:text-8xl {
+        font-size: 2.25rem !important;
+    }
+    
+    /* Subtitle responsive */
+    #about .text-xl {
+        font-size: 1rem !important; /* text-base */
+        line-height: 1.5 !important;
+    }
+    
+    #about .lg\\:text-3xl {
+        font-size: 1rem !important;
+    }
+    
+    #about .xl\\:text-4xl {
+        font-size: 1rem !important;
+    }
+    
+    /* Badge responsive */
+    #about .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    #about .py-3 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    /* Spacing adjustments */
+    #about .mb-24 {
+        margin-bottom: 3rem !important;
+    }
+    
+    #about .lg\\:mb-32 {
+        margin-bottom: 3rem !important;
+    }
+    
+    #about .mb-32 {
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Grid responsive */
+    #about .lg\\:grid-cols-12 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #about .lg\\:col-span-6 {
+        grid-column: span 1 / span 1 !important;
+    }
+    
+    #about .gap-16 {
+        gap: 2rem !important;
+    }
+    
+    #about .xl\\:gap-24 {
+        gap: 2rem !important;
+    }
+    
+    /* Card padding responsive */
+    #about .p-10 {
+        padding: 1.5rem !important;
+    }
+    
+    #about .p-12 {
+        padding: 1.5rem !important;
+    }
+    
+    #about .lg\\:p-16 {
+        padding: 1.5rem !important;
+    }
+    
+    /* Text sizing in cards */
+    #about .text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    #about .text-xl {
+        font-size: 1rem !important;
+    }
+    
+    #about .text-lg {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Icon sizing */
+    #about .w-16 {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+    
+    #about .h-16 {
+        height: 3rem !important;
+    }
+    
+    #about .w-8 {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+    
+    #about .h-8 {
+        height: 1.5rem !important;
+    }
+    
+    /* Stats grid responsive */
+    #about .grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #about .lg\\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    /* Stats card responsive */
+    #about .text-4xl {
+        font-size: 2rem !important;
+    }
+    
+    #about .lg\\:text-6xl {
+        font-size: 2rem !important;
+    }
+    
+    /* Product showcase responsive */
+    #about .w-40 {
+        width: 6rem !important;
+        height: 6rem !important;
+    }
+    
+    #about .h-40 {
+        height: 6rem !important;
+    }
+    
+    #about .w-28 {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    
+    #about .h-28 {
+        height: 5rem !important;
+    }
+    
+    #about .w-14 {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+    }
+    
+    #about .h-14 {
+        height: 2.5rem !important;
+    }
+    
+    /* Features grid responsive */
+    #about .lg\\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    /* Team section responsive */
+    #about .text-4xl {
+        font-size: 1.75rem !important;
+    }
+    
+    #about .lg\\:text-6xl {
+        font-size: 1.75rem !important;
+    }
+    
+    #about .text-2xl {
+        font-size: 1rem !important;
+    }
+    
+    #about .lg\\:text-2xl {
+        font-size: 1rem !important;
+    }
+}
+
+/* Tablet responsive */
+@media (min-width: 641px) and (max-width: 1023px) {
+    #about {
+        padding: 4rem 0 5rem;
+    }
+    
+    /* Typography adjustments for tablet */
+    #about .text-5xl {
+        font-size: 3rem !important;
+    }
+    
+    #about .lg\\:text-7xl {
+        font-size: 3rem !important;
+    }
+    
+    #about .xl\\:text-8xl {
+        font-size: 3rem !important;
+    }
+    
+    #about .text-xl {
+        font-size: 1.125rem !important;
+    }
+    
+    #about .lg\\:text-3xl {
+        font-size: 1.25rem !important;
+    }
+    
+    #about .xl\\:text-4xl {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Grid adjustments */
+    #about .lg\\:grid-cols-12 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #about .lg\\:col-span-6 {
+        grid-column: span 1 / span 1 !important;
+    }
+    
+    /* Spacing adjustments */
+    #about .gap-16 {
+        gap: 3rem !important;
+    }
+    
+    #about .xl\\:gap-24 {
+        gap: 3rem !important;
+    }
+    
+    #about .mb-24 {
+        margin-bottom: 4rem !important;
+    }
+    
+    #about .lg\\:mb-32 {
+        margin-bottom: 4rem !important;
+    }
+    
+    #about .mb-32 {
+        margin-bottom: 3rem !important;
+    }
+    
+    /* Card padding */
+    #about .p-10 {
+        padding: 2rem !important;
+    }
+    
+    #about .p-12 {
+        padding: 2rem !important;
+    }
+    
+    #about .lg\\:p-16 {
+        padding: 2rem !important;
+    }
+    
+    /* Stats grid for tablet */
+    #about .lg\\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Large desktop responsive */
+@media (min-width: 1024px) {
+    /* Ensure desktop styles work properly */
+    #about .lg\\:text-7xl {
+        font-size: 4.5rem !important;
+    }
+    
+    #about .xl\\:text-8xl {
+        font-size: 6rem !important;
+    }
+    
+    #about .lg\\:text-3xl {
+        font-size: 1.875rem !important;
+    }
+    
+    #about .xl\\:text-4xl {
+        font-size: 2.25rem !important;
+    }
+    
+    #about .lg\\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+    }
+    
+    #about .lg\\:col-span-6 {
+        grid-column: span 6 / span 6 !important;
+    }
+    
+    #about .lg\\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+    
+    #about .lg\\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* ======================================================== */
+/* ENHANCED MOBILE INTERACTIONS */
+/* ======================================================== */
+
+@media (max-width: 640px) {
+    /* Touch-friendly interactions */
+    #about .group:hover {
+        transform: none !important;
+    }
+    
+    #about .hover\\:-translate-y-3:hover {
+        transform: none !important;
+    }
+    
+    #about .hover\\:-translate-y-2:hover {
+        transform: none !important;
+    }
+    
+    /* Tap interactions for mobile */
+    #about .group:active {
+        transform: translateY(-2px) !important;
+        transition: transform 0.1s ease !important;
+    }
+    
+    /* Reduce animation intensity on mobile */
+    #about .animate-pulse {
+        animation: none !important;
+    }
+    
+    #about .animate-ping {
+        animation: none !important;
+    }
+    
+    #about .animate-bounce {
+        animation: none !important;
+    }
+    
+    /* Simplify backgrounds on mobile for performance */
+    #about .backdrop-blur-lg {
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    #about .backdrop-blur-sm {
+        backdrop-filter: blur(5px) !important;
+    }
+    
+    /* Reduce shadow complexity */
+    #about .shadow-3xl {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    #about .shadow-2xl {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+    }
+}
+
+/* ======================================================== */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ======================================================== */
+
+/* Focus states for keyboard navigation */
+#about .group:focus-within {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #about .bg-white\/90 {
+        background-color: white !important;
+    }
+    
+    #about .text-gray-600 {
+        color: #374151 !important;
+    }
+    
+    #about .text-gray-700 {
+        color: #1f2937 !important;
+    }
+    
+    #about .border-blue-100\/80 {
+        border-color: #3b82f6 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #about * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    #about .group:hover {
+        transform: none !important;
+    }
+}
+
+/* ======================================================== */
+/* ORIGINAL ANIMATIONS AND EFFECTS */
+/* ======================================================== */
+
 /* Animation delays for decorative elements */
 .animation-delay-1000 {
     animation-delay: 1s;

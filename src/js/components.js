@@ -198,7 +198,7 @@ class ComponentLoader {
         // Initialize features in the correct order
         this.initScrollEffects();
         this.initSmoothScrolling();
-        this.initMobileMenu();
+        this.initMobileMenu(); // Add mobile menu initialization
         // this.initLiquidGlassHeaderAI(); // Disabled AI color adaptation
         this.initIntersectionObservers();
         this.initLoadingAnimations();
@@ -274,39 +274,6 @@ class ComponentLoader {
                 }
             });
         });
-    }
-
-    // Mobile Menu Toggle
-    initMobileMenu() {
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                const isHidden = mobileMenu.classList.contains('hidden');
-                
-                if (isHidden) {
-                    mobileMenu.classList.remove('hidden');
-                    setTimeout(() => mobileMenu.classList.add('show'), 10);
-                } else {
-                    mobileMenu.classList.remove('show');
-                    setTimeout(() => mobileMenu.classList.add('hidden'), 300);
-                }
-                
-                // Animate hamburger menu
-                const spans = menuBtn.querySelectorAll('span');
-                spans.forEach((span, index) => {
-                    if (isHidden) {
-                        if (index === 0) span.style.transform = 'rotate(45deg) translate(6px, 6px)';
-                        if (index === 1) span.style.opacity = '0';
-                        if (index === 2) span.style.transform = 'rotate(-45deg) translate(6px, -6px)';
-                    } else {
-                        span.style.transform = '';
-                        span.style.opacity = '';
-                    }
-                });
-            });
-        }
     }
 
     // ======================================================================
@@ -630,6 +597,139 @@ class ComponentLoader {
             }, index * 100);
         });
     }
+
+    // Mobile Menu Initialization
+    initMobileMenu() {
+        console.log('🔄 Initializing mobile menu...');
+        
+        // Wait for DOM to be fully ready
+        setTimeout(() => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            console.log('📱 Mobile menu button:', mobileMenuBtn);
+            console.log('📱 Mobile menu:', mobileMenu);
+            
+            if (mobileMenuBtn && mobileMenu) {
+                console.log('✅ Mobile menu elements found, setting up listeners...');
+                
+                // Remove any existing listeners
+                mobileMenuBtn.replaceWith(mobileMenuBtn.cloneNode(true));
+                const newBtn = document.getElementById('mobile-menu-btn');
+                
+                // Force initial state
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.add('mobile-menu-glass-outside'); // Add new positioning class
+                mobileMenu.style.display = 'none';
+                
+                newBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('📱 Mobile menu button clicked!');
+                    
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    console.log('📱 Menu is currently hidden:', isHidden);
+                    
+                    if (isHidden) {
+                        // Show menu with beautiful animation
+                        mobileMenu.classList.remove('hidden', 'closing');
+                        mobileMenu.classList.add('show');
+                        mobileMenu.style.display = 'block';
+                        
+                        // Reset nav link animations
+                        const navLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+                        const button = mobileMenu.querySelector('.btn-primary-glass');
+                        
+                        navLinks.forEach(link => {
+                            link.style.opacity = '0';
+                            link.style.transform = 'translateY(20px)';
+                        });
+                        
+                        if (button) {
+                            button.style.opacity = '0';
+                            button.style.transform = 'translateY(20px)';
+                        }
+                        
+                        console.log('📱 Mobile menu SHOWN with beautiful liquid glass design');
+                    } else {
+                        // Hide menu with smooth closing animation
+                        mobileMenu.classList.add('closing');
+                        mobileMenu.classList.remove('show');
+                        
+                        // Hide after animation completes
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('closing');
+                            mobileMenu.style.display = 'none';
+                        }, 300);
+                        
+                        console.log('📱 Mobile menu hidden with smooth animation');
+                    }
+                    
+                    // Enhanced hamburger menu animation
+                    const spans = newBtn.querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        if (isHidden) {
+                            // Transform to X
+                            if (index === 0) {
+                                span.style.transform = 'rotate(45deg) translate(6px, 6px)';
+                                span.style.transformOrigin = 'center';
+                            }
+                            if (index === 1) {
+                                span.style.opacity = '0';
+                                span.style.transform = 'scaleX(0)';
+                            }
+                            if (index === 2) {
+                                span.style.transform = 'rotate(-45deg) translate(6px, -6px)';
+                                span.style.transformOrigin = 'center';
+                            }
+                        } else {
+                            // Transform back to hamburger
+                            span.style.transform = 'rotate(0) translate(0, 0)';
+                            span.style.opacity = '1';
+                            span.style.transformOrigin = 'center';
+                        }
+                    });
+                });
+                
+                // Close mobile menu when clicking on links
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Smooth close animation
+                        mobileMenu.classList.add('closing');
+                        mobileMenu.classList.remove('show');
+                        
+                        setTimeout(() => {
+                            mobileMenu.classList.add('hidden');
+                            mobileMenu.classList.remove('closing');
+                            mobileMenu.style.display = 'none';
+                        }, 300);
+                        
+                        console.log('📱 Mobile menu closed via link click with animation');
+                        
+                        // Reset hamburger animation
+                        const spans = newBtn.querySelectorAll('span');
+                        spans.forEach(span => {
+                            span.style.transform = 'rotate(0) translate(0, 0)';
+                            span.style.opacity = '1';
+                            span.style.transformOrigin = 'center';
+                        });
+                    });
+                });
+                
+                console.log('✅ Mobile menu initialized successfully!');
+            } else {
+                console.error('❌ Mobile menu elements not found!');
+                console.log('Available elements:', {
+                    allButtons: document.querySelectorAll('button'),
+                    allIds: Array.from(document.querySelectorAll('[id]')).map(el => el.id)
+                });
+            }
+        }, 300); // Increased timeout to ensure DOM is ready
+    }
+
+    // ======================================================================
 }
 
 // Initialize when DOM is loaded
@@ -667,4 +767,4 @@ window.addEventListener('resize', () => {
 });
 
 // Export for global access if needed
-window.ComponentLoader = ComponentLoader; 
+window.ComponentLoader = ComponentLoader;

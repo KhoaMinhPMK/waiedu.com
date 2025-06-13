@@ -25,7 +25,7 @@ header.glass-header {
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: 1000 !important;
+    z-index: 8888 !important;
 }
 
 #header.scrolled {
@@ -491,6 +491,12 @@ header.glass-header {
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
     
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Ensure button is clickable */
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    pointer-events: auto !important;
 }
 
 .glass-menu-btn span {
@@ -505,70 +511,7 @@ header.glass-header {
             inset 0 1px 0 rgba(255, 255, 255, 0.3);
     }
 
-/* Enhanced Mobile menu */
-.mobile-menu-glass {
-    background: rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    
-    border-top: 0.5px solid rgba(255, 255, 255, 0.15);
-    margin-top: 1px;
-    border-radius: 0 0 24px 24px;
-    
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav-link {
-    display: block;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
-    padding: 12px 16px;
-    border-radius: 18px;
-    margin: 3px 0;
-    
-    /* Black background */
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px);
-    border: 0.5px solid rgba(255, 255, 255, 0.2);
-    
-    /* Transition for smooth effects */
-    transition: all 0.2s ease;
-    text-decoration: none;
-}
-
-.mobile-nav-link:hover {
-    /* No effects on hover - keep same as default */
-    color: rgba(255, 255, 255, 0.9); /* Keep same color */
-    background: rgba(0, 0, 0, 0.8); /* Keep same black background */
-    border: 0.5px solid rgba(255, 255, 255, 0.2); /* Keep same border */
-    box-shadow: none; /* No shadow */
-}
-
-/* Temporary active state when clicking mobile links */
-.mobile-nav-link:active {
-    background: rgba(255, 255, 255, 0.95) !important;
-    color: rgba(0, 0, 0, 0.9) !important;
-    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-    transform: none;
-    transition: all 0.15s ease !important;
-}
-
-/* Persistent active state for selected mobile navigation link */
-.mobile-nav-link.active {
-    background: rgba(255, 255, 255, 0.95) !important;
-    color: rgba(0, 0, 0, 0.9) !important;
-    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-    transform: none;
-    transition: all 0.2s ease !important;
-}
+/* Removed old mobile menu CSS - using new design in header.html */
 
 /* ================================================= */
 /* SCROLL EFFECTS WITH ENHANCED LIQUID GLASS */
@@ -602,7 +545,7 @@ header.glass-header {
 .nav-link-glass::after,
 .nav-link-glass:hover::after,
 .nav-link-glass:focus::after,
-.nav-link-glass:active::after {
+nav-link-glass:active::after {
     display: none !important;
     content: none !important;
     opacity: 0 !important;
@@ -647,8 +590,7 @@ a.nav-link-glass:visited {
 }
 
 /* No transitions for navigation links */
-.glass-header .nav-link-glass,
-.glass-header .mobile-nav-link {
+.glass-header .nav-link-glass {
     transition: none !important;
 }
 
@@ -796,8 +738,6 @@ body {
 .nav-link-glass:active,
 .glass-menu-btn:focus,
 .glass-menu-btn:active,
-.mobile-nav-link:focus,
-.mobile-nav-link:active,
 .btn-primary-glass:focus,
 .btn-primary-glass:active {
     outline: none !important;
@@ -843,23 +783,7 @@ body {
     transform: scale(0.95);
 }
 
-.mobile-nav-link:focus {
-    border-radius: 18px !important;
-    background: rgba(0, 0, 0, 0.8) !important;
-    border: 0.5px solid rgba(255, 255, 255, 0.2) !important;
-}
 
-/* Active state overrides focus state for mobile links */
-.mobile-nav-link:active,
-.mobile-nav-link.active {
-    border-radius: 18px !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    color: rgba(0, 0, 0, 0.9) !important;
-    border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-}
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
@@ -915,4 +839,12 @@ a.nav-link-glass.active:focus {
     color: #111827 !important; /* slate-900 */
     border: 0.5px solid rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
-} 
+}
+
+/* Removed old mobile menu CSS - using new design in header.html */
+
+/* Removed old mobile menu CSS - using new design in header.html */
+
+/* ================================================= */
+/* SCROLL EFFECTS WITH ENHANCED LIQUID GLASS */
+/* ================================================= */

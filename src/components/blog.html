@@ -1,49 +1,275 @@
 <!-- Blog Section -->
-<section id="blog" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">Latest from Our Blog</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay updated with the latest trends, insights, and news in education technology
+<section id="blog" class="py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-purple-50">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 opacity-30">
+        <div class="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-float animation-delay-1000"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-20">
+            <!-- Premium Badge -->
+            <div class="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-lg border border-purple-200/60 rounded-full shadow-2xl mb-8">
+                <div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4 animate-pulse"></div>
+                <span class="text-sm font-bold text-gray-800 tracking-widest uppercase">WAIEDU Insights</span>
+            </div>
+            
+            <h2 class="text-4xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-10 leading-tight">
+                STEM Education
+                <br>
+                <span class="bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
+                    Innovation Hub
+                </span>
+            </h2>
+            <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Discover the latest insights, success stories, and educational innovations from the 
+                <span class="font-semibold text-gray-800">WAIEDU community</span> transforming STEM learning across Vietnam
             </p>
         </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600"></div>
-                <div class="p-6">
-                    <div class="text-sm text-gray-500 mb-2">March 15, 2024</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">The Future of AI in Education</h3>
-                    <p class="text-gray-600 mb-4">Exploring how artificial intelligence is transforming the educational landscape...</p>
-                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+
+        <!-- Featured Article -->
+        <div class="mb-20">
+            <article class="group relative bg-white/90 backdrop-blur-lg border border-purple-200/60 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700">
+                <div class="grid lg:grid-cols-2 gap-0">
+                    <!-- Article Image -->
+                    <div class="relative h-64 lg:h-96 bg-gradient-to-br from-purple-500 via-pink-500 to-indigo-500 overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="absolute bottom-6 left-6">
+                            <span class="bg-white/90 text-purple-700 px-4 py-2 rounded-full text-sm font-bold">Featured</span>
+                        </div>
+                        <!-- Mockup science content -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <svg class="w-20 h-20 mx-auto mb-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                                <div class="text-lg font-semibold">STEM Innovation</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article Content -->
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="flex items-center text-sm text-purple-600 mb-4">
+                            <span class="bg-purple-100 px-3 py-1 rounded-full font-semibold mr-3">Case Study</span>
+                            <span>December 15, 2024</span>
+                        </div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-700 transition-colors">
+                            How Hanoi International School Transformed Physics Learning with WAIEDU
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Discover how students at Hanoi International School achieved a 95% improvement in physics comprehension using WAIEDU's AI-powered physical kits. From abstract concepts to tangible understanding in just 6 months.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition-all duration-300">
+                                Read Success Story
+                            </button>
+                            <span class="text-gray-500 text-sm">8 min read</span>
+                        </div>
+                    </div>
                 </div>
             </article>
-            
-            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-green-400 to-green-600"></div>
+        </div>
+
+        <!-- Blog Articles Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <!-- Article 1: Teaching Innovation -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="p-6">
-                    <div class="text-sm text-gray-500 mb-2">March 12, 2024</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Personalized Learning Strategies</h3>
-                    <p class="text-gray-600 mb-4">Discover effective strategies for creating personalized learning experiences...</p>
-                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    <div class="flex items-center text-sm text-blue-600 mb-3">
+                        <span class="bg-blue-100 px-3 py-1 rounded-full font-semibold mr-3">Teaching Tips</span>
+                        <span>Dec 10, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                        5 Ways AI is Revolutionizing Physics Education
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Explore how artificial intelligence is transforming traditional physics teaching methods and enhancing student engagement...
+                    </p>
+                    <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
             </article>
-            
-            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600"></div>
+
+            <!-- Article 2: Student Success -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                </div>
                 <div class="p-6">
-                    <div class="text-sm text-gray-500 mb-2">March 10, 2024</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Building Learning Communities</h3>
-                    <p class="text-gray-600 mb-4">How to foster collaboration and engagement in online learning environments...</p>
-                    <a href="#" class="text-primary-600 font-medium hover:text-primary-700">Read More →</a>
+                    <div class="flex items-center text-sm text-green-600 mb-3">
+                        <span class="bg-green-100 px-3 py-1 rounded-full font-semibold mr-3">Success Story</span>
+                        <span>Dec 8, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                        Student Wins National Physics Olympiad Using WAIEDU
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Meet Nguyen Minh Duc, a 12th grader who credited WAIEDU's hands-on approach for his victory in the National Physics Olympiad...
+                    </p>
+                    <button class="text-green-600 font-semibold hover:text-green-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 3: Technology Innovation -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-purple-600 mb-3">
+                        <span class="bg-purple-100 px-3 py-1 rounded-full font-semibold mr-3">Innovation</span>
+                        <span>Dec 5, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-700 transition-colors">
+                        The Future of AR in STEM Education
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Augmented Reality is reshaping how students visualize complex physics concepts. Here's what the next decade holds...
+                    </p>
+                    <button class="text-purple-600 font-semibold hover:text-purple-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 4: Implementation Guide -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-orange-600 mb-3">
+                        <span class="bg-orange-100 px-3 py-1 rounded-full font-semibold mr-3">Implementation</span>
+                        <span>Dec 3, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-700 transition-colors">
+                        Complete Guide: Setting Up WAIEDU in Your School
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        A step-by-step guide for schools looking to implement WAIEDU's innovative STEM education platform...
+                    </p>
+                    <button class="text-orange-600 font-semibold hover:text-orange-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 5: Research Insights -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-indigo-500 to-blue-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-indigo-600 mb-3">
+                        <span class="bg-indigo-100 px-3 py-1 rounded-full font-semibold mr-3">Research</span>
+                        <span>Nov 30, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-700 transition-colors">
+                        WAIEDU Impact Study: 300+ Schools Analysis
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Our comprehensive research across 300+ Vietnamese schools reveals significant improvements in STEM learning outcomes...
+                    </p>
+                    <button class="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article 6: Community Spotlight -->
+            <article class="group bg-white/90 backdrop-blur-lg border border-gray-200/60 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-white">
+                        <svg class="w-16 h-16 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-sm text-teal-600 mb-3">
+                        <span class="bg-teal-100 px-3 py-1 rounded-full font-semibold mr-3">Community</span>
+                        <span>Nov 28, 2024</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-700 transition-colors">
+                        Teacher Spotlight: Innovative STEM Educators
+                    </h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Meet the passionate educators who are transforming STEM education using creative teaching methods and WAIEDU tools...
+                    </p>
+                    <button class="text-teal-600 font-semibold hover:text-teal-700 transition-colors inline-flex items-center">
+                        Read More
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
                 </div>
             </article>
         </div>
         
-        <div class="text-center mt-12">
-            <button class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-                View All Posts
-            </button>
+        <!-- Newsletter Subscription -->
+        <div class="text-center bg-white/90 backdrop-blur-lg border border-purple-200/60 rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                Stay Updated with WAIEDU Insights
+            </h3>
+            <p class="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter for the latest STEM education innovations, teaching tips, and success stories from the WAIEDU community
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email address" 
+                       class="flex-1 px-6 py-4 border border-gray-300 rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg">
+                    Subscribe
+                </button>
+            </div>
         </div>
     </div>
-</section> 
+</section>

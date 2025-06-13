@@ -22,9 +22,8 @@
     <link rel="preload" href="./assets/logo.svg" as="image">
     <link rel="preload" href="./assets/sec1.png" as="image">
 </head>
-<body class="antialiased">
-    <!-- Loading indicator -->
-    <div id="loading" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+<body class="antialiased">    <!-- Loading indicator -->
+    <div id="loading" class="fixed inset-0 bg-white flex items-center justify-center" style="z-index: 9999;">
         <div class="text-center">
             <div class="w-12 h-12 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mb-4"></div>
             <p class="text-gray-600">Loading...</p>
@@ -37,15 +36,11 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section Placeholder -->
-        <div id="hero-placeholder"></div>
-
-        <!-- About Section Placeholder -->
+        <div id="hero-placeholder"></div>        <!-- About Section Placeholder -->
         <div id="about-placeholder"></div>
 
         <!-- Solution Section Placeholder -->
-        <div id="solution-placeholder"></div>
-
-        <!-- Product Section Placeholder -->
+        <div id="solution-placeholder"></div>        <!-- Product Section Placeholder -->
         <div id="product-placeholder"></div>
 
         <!-- Competition Section Placeholder -->
@@ -63,17 +58,35 @@
 
     <!-- Scripts -->
     <script type="module" src="./js/components.js"></script>
-    <script type="module" src="./js/main.js"></script>
-    
-    <!-- Hide loading screen when everything is loaded -->
+    <script type="module" src="./js/main.js"></script>    <!-- Hide loading screen when everything is loaded -->
     <script>
-        window.addEventListener('load', () => {
+        // Force remove loading screen immediately
+        setTimeout(() => {
             const loading = document.getElementById('loading');
             if (loading) {
+                loading.remove();
+                console.log('Loading screen force removed');
+            }
+        }, 100);
+        
+        // Hide loading immediately when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.transition = 'opacity 0.3s ease';
                 loading.style.opacity = '0';
                 setTimeout(() => {
                     loading.remove();
+                    console.log('Loading screen removed');
                 }, 300);
+            }
+        });
+        
+        // Backup removal on window load
+        window.addEventListener('load', () => {
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.remove();
             }
         });
     </script>

@@ -5,6 +5,15 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    padding-top: 5rem; /* Add padding to avoid header overlap */
+}
+
+/* Responsive hero padding */
+@media (max-width: 768px) {
+    #hero {
+        padding: 4rem 1rem 2rem 1rem; /* Top, horizontal, bottom padding */
+        min-height: 100vh;
+    }
 }
 
 /* Animated background blobs */
@@ -178,20 +187,24 @@
 
 /* Hero Glass Styles */
 .hero-glass {
+    /* Temporarily use solid background to debug */
     background: linear-gradient(
         135deg,
-        rgba(30, 58, 138, 0.9) 0%,
-        rgba(79, 70, 229, 0.8) 25%,
-        rgba(129, 140, 248, 0.7) 50%,
-        rgba(165, 180, 252, 0.6) 75%,
-        rgba(199, 210, 254, 0.5) 100%
-    );
+        #1e3a8a 0%,
+        #4f46e5 25%,
+        #818cf8 50%,
+        #a5b4fc 75%,
+        #c7d2fe 100%
+    ) !important;
     position: relative;
     overflow: hidden;
     padding-top: 0; /* Remove padding, use body padding instead */
+    z-index: 1; /* Ensure hero is above other elements */
 }
 
 .hero-glass::before {
+    /* Temporarily disable overlay to debug */
+    display: none;
     content: '';
     position: absolute;
     top: 0;
@@ -437,8 +450,7 @@
 /* Comprehensive override to eliminate ALL possible border/outline effects for hero buttons */
 .btn-hero-primary,
 .btn-hero-secondary {
-    outline: none !important;
-    outline-width: 0 !important;
+    outline: none !important;    outline-width: 0 !important;
     outline-style: none !important;
     outline-color: transparent !important;
     outline-offset: 0 !important;
@@ -446,7 +458,6 @@
     border-width: 0 !important;
     border-style: none !important;
     border-color: transparent !important;
-    box-shadow-outline: none !important;
 }
 
 /* Focus states without any border/outline animation */
@@ -529,11 +540,6 @@ input.btn-hero-secondary:focus,
     border: none !important;
     border-radius: 16px !important;
     animation: none !important;
-    box-shadow-outline: none !important;
-    ring: none !important;
-    ring-color: transparent !important;
-    ring-offset: 0 !important;
-    ring-width: 0 !important;
 }
 
 /* Final safety override - eliminate ANY possible border/outline effects */
@@ -755,98 +761,104 @@ input.btn-hero-secondary:focus,
     }
 }
 
-/* Responsive Design */
-@media (max-width: 1023px) {
-    .hero-glass {
-        padding-top: 0;
-        text-align: center;
+/* MOBILE RESPONSIVE IMPROVEMENTS */
+@media (max-width: 768px) {
+    #hero {
+        padding: 4rem 1rem 2rem 1rem; /* Top, horizontal, bottom padding */
+        min-height: 100vh;    }    /* Hero title responsive - Make WAIEDU MUCH BIGGER on mobile */
+    .hero-title {
+        font-size: 7rem !important; /* Tăng lên 7rem (112px) rất lớn cho mobile */
+        line-height: 0.85 !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
     }
     
-    .glass-stats {
-        justify-content: center;
-        max-width: 100%;
+    /* Make WAIEDU text EXTRA LARGE on mobile */
+    .hero-title .text-gradient-hero {
+        font-size: 7rem !important; /* 7rem = 112px, lớn hơn desktop */
+        font-weight: 900 !important; /* Extra bold */
+        text-align: center !important;
+        line-height: 0.8 !important;
+        letter-spacing: -0.03em !important; /* Tighter spacing */
     }
     
+    /* Hero grid - stack on mobile */
+    #hero .grid.lg\\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        text-align: center !important;
+    }
+    
+    /* Hero image container */
+    #hero .glass-frame {
+        margin-top: 2rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Hide floating elements on mobile for cleaner look */
     .floating-element {
-        display: none;
+        display: none !important;
     }
     
+    /* Hide decorative rings on mobile */
     .decorative-rings {
-        display: none;
-    }
-}
-
-@media (max-width: 640px) {
-    .hero-glass {
-        padding-top: 0;
-        min-height: 100vh;
+        display: none !important;
     }
     
-    .text-gradient-hero {
-        font-size: 2.5rem;
+    /* Hero stats - stack vertically on mobile */
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin-top: 2rem !important;
     }
     
-    .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .glass-stats {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px 20px;
-        margin-top: 1.5rem;
+    .stat-item {
+        text-align: center !important;
     }
     
     .stat-divider {
-        width: 60px;
-        height: 1px;
-        background: linear-gradient(
-            to right,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-        );
+        display: none !important;
     }
     
-    .btn-hero-primary,
-    .btn-hero-secondary {
-        width: 100%;
-        padding: 14px 24px;
-        font-size: 0.95rem;
+    /* Hero subtitle responsive */
+    #hero .space-y-6 span {
+        font-size: 1.125rem !important;
+        line-height: 1.5 !important;
     }
     
-    .glass-frame {
-        padding: 16px;
-        margin-top: 32px;
+    /* Hero buttons responsive */
+    #hero .space-x-6 {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+        margin-top: 2rem !important;
     }
     
-    .hero-image {
-        width: 90%; /* Slightly larger on mobile for better visibility */
-    }
-    
-    .orb {
-        display: none;
-    }
-    
+    /* Scroll indicator positioning */
     .scroll-indicator {
-        bottom: 20px;
-        right: 20px;
+        bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small phones - WAIEDU still very large */
+    #hero {
+        padding: 3rem 0.5rem 1.5rem 0.5rem;
     }
     
-    .scroll-button {
-        width: 50px;
-        height: 50px;
+    .hero-title {
+        font-size: 5rem !important; /* Vẫn rất lớn cho điện thoại nhỏ */
     }
     
-    .scroll-arrow {
-        width: 16px;
-        height: 16px;
+    .hero-title .text-gradient-hero {
+        font-size: 5rem !important; /* 5rem = 80px cho điện thoại nhỏ */
+        line-height: 0.85 !important;
     }
     
-    .scroll-text {
-        bottom: -25px;
-        font-size: 0.7rem;
+    #hero .space-y-6 span {
+        font-size: 1rem !important;
     }
 }
 
@@ -891,4 +903,4 @@ input.btn-hero-secondary:focus,
         border: 1px solid #ccc;
         backdrop-filter: none;
     }
-} 
+}

@@ -1,6 +1,9 @@
 // Import Alpine.js for reactive components
 import Alpine from 'alpinejs'
 
+// Import product responsive testing
+import './product-responsive-test.js'
+
 // Make Alpine available globally
 window.Alpine = Alpine
 
@@ -67,9 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize Alpine.js
   Alpine.start()
   
-  // Initialize mobile menu
-  initMobileMenu()
-  
   // Initialize smooth scrolling
   initSmoothScrolling()
   
@@ -87,26 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initNavigationEffects()
   initSectionObserver()
 })
-
-// Initialize mobile menu
-function initMobileMenu() {
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn')
-  const mobileMenu = document.getElementById('mobileMenu')
-  
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden')
-    })
-    
-    // Close mobile menu when clicking on links
-    const mobileLinks = mobileMenu.querySelectorAll('a')
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden')
-      })
-    })
-  }
-}
 
 // Initialize smooth scrolling
 function initSmoothScrolling() {
@@ -495,7 +475,7 @@ function initHeaderColorChange() {
 function initSectionObserver() {
     // Create an intersection observer to track which section is in view
     const sections = document.querySelectorAll('section[id]');
-    const linksSelector = '.nav-link-glass, .mobile-nav-link';
+    const linksSelector = '.nav-link-glass, .mobile-nav-link, .mobile-nav-card';
  
     const observerOptions = {
         root: null,
@@ -543,7 +523,7 @@ function initSectionObserver() {
 // Navigation link click effects
 function initNavigationEffects() {
     // Get all navigation links
-    const navLinks = document.querySelectorAll('.nav-link-glass, .mobile-nav-link');
+    const navLinks = document.querySelectorAll('.nav-link-glass, .mobile-nav-link, .mobile-nav-card');
     let isUserClicking = false; // Flag to prevent observer interference
     
     navLinks.forEach(link => {
@@ -587,10 +567,14 @@ function initNavigationEffects() {
             }
             
             // If it's a mobile menu link, close the mobile menu
-            if (this.classList.contains('mobile-nav-link')) {
+            if (this.classList.contains('mobile-nav-link') || this.classList.contains('mobile-nav-card')) {
                 const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileMenu) {
-                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('show');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        document.body.style.overflow = '';
+                    }, 400);
                 }
             }
         });

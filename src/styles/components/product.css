@@ -1,0 +1,841 @@
+/* Product Section Responsive Styles */
+
+/* ======================================================== */
+/* RESPONSIVE DESIGN FOR PRODUCT SECTIONS */
+/* ======================================================== */
+
+/* Mobile-first responsive design (max-width: 640px) */
+@media (max-width: 640px) {
+    /* Product Intro Section */
+    #product-intro {
+        min-height: 90vh !important;
+        padding: 2rem 0 !important;
+    }
+    
+    #product-intro .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Product intro content positioning */
+    #product-intro .text-center {
+        transform: translateY(-60%) !important;
+    }
+    
+    /* Badge responsive */
+    #product-intro .inline-flex {
+        padding: 0.5rem 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    #product-intro .w-2\.5 {
+        width: 0.5rem !important;
+        height: 0.5rem !important;
+    }
+    
+    #product-intro .text-xs {
+        font-size: 0.625rem !important;
+    }
+    
+    /* Main heading responsive */
+    #product-intro .text-5xl {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #product-intro .lg\:text-7 xl {
+        font-size: 2rem !important;
+    }
+    
+    /* Spacing adjustments */
+    #product-intro .space-y-8 {
+        gap: 1.5rem !important;
+    }
+    
+    #product-intro .space-y-5 {
+        gap: 1rem !important;
+    }
+    
+    /* Product image scaling */
+    #product-intro .product-image {
+        height: 60% !important;
+        max-height: 350px !important;
+    }
+    
+    /* Background shapes - reduce for mobile using class names */
+    #product-intro .abstract-shape {
+        transform: scale(0.5) !important;
+    }
+    
+    /* Product Features Section */
+    #product-features {
+        padding: 3rem 0 !important;
+    }
+    
+    #product-features .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Features section header */
+    #product-features .text-4xl {
+        font-size: 1.875rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    #product-features .lg\:text-5 xl {
+        font-size: 1.875rem !important;
+    }
+    
+    #product-features .text-xl {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    #product-features .mb-20 {
+        margin-bottom: 2rem !important;
+    }
+    
+    #product-features .mb-6 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Features grid - stack vertically */
+    #product-features .md\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #product-features .lg\:grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #product-features .gap-8 {
+        gap: 1.5rem !important;
+    }
+    
+    /* Feature cards */
+    #product-features .p-8 {
+        padding: 1.5rem !important;
+    }
+    
+    #product-features .rounded-3xl {
+        border-radius: 1.5rem !important;
+    }
+    
+    #product-features .w-16 {
+        width: 3rem !important;
+        height: 3rem !important;
+    }
+    
+    #product-features .h-16 {
+        height: 3rem !important;
+    }
+    
+    #product-features .text-2xl {
+        font-size: 1.25rem !important;
+    }
+    
+    #product-features .mb-3 {
+        margin-bottom: 0.75rem !important;
+    }
+    
+    #product-features .mb-6 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Product Slides Section */
+    #product-slides {
+        padding: 2rem 0 !important;
+    }
+    
+    #product-slides .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Grid layout - stack on mobile */
+    #product-slides .lg\:grid-cols-2 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #product-slides .gap-16 {
+        gap: 2rem !important;
+    }
+    
+    #product-slides .lg\:gap-24 {
+        gap: 2rem !important;
+    }
+    
+    #product-slides .min-h-80vh {
+        min-height: auto !important;
+    }
+    
+    #product-slides .py-16 {
+        padding: 2rem 0 !important;
+    }
+    
+    #product-slides .lg\:py-24 {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Content spacing */
+    #product-slides .space-y-8 {
+        gap: 1.5rem !important;
+    }
+    
+    #product-slides .lg\:space-y-12 {
+        gap: 1.5rem !important;
+    }
+    
+    #product-slides .space-y-6 {
+        gap: 1rem !important;
+    }
+    
+    /* Ecosystem title */
+    #product-slides .text-4xl {
+        font-size: 1.875rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #product-slides .lg\:text-6 xl {
+        font-size: 1.875rem !important;
+    }
+    
+    #product-slides .text-xl {
+        font-size: 1rem !important;
+    }
+    
+    #product-slides .lg\:text-2 xl {
+        font-size: 1rem !important;
+    }
+    
+    /* Feature list items */
+    #product-slides .text-lg {
+        font-size: 1rem !important;
+    }
+    
+    /* CTA button */
+    #product-slides .px-8 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    #product-slides .py-4 {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+    }
+    
+    /* Product showcase grid */
+    #product-slides .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    #product-slides .lg\:grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    }
+    
+    /* Slide cards */
+    .slide-card {
+        padding: 1.5rem !important;
+        border-radius: 1.5rem !important;
+    }
+    
+    .slide-card img {
+        width: 6rem !important;
+        height: 6rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .slide-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .slide-card ul {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Wave decorations - hide on mobile */
+    #product-slides svg {
+        display: none !important;
+    }
+}
+
+/* Tablet responsive (641px - 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
+    /* Product Intro Section */
+    #product-intro {
+        min-height: 95vh !important;
+    }
+    
+    #product-intro .text-center {
+        transform: translateY(-70%) !important;
+    }
+    
+    /* Typography adjustments */
+    #product-intro .text-5xl {
+        font-size: 3rem !important;
+    }
+    
+    #product-intro .lg\:text-7 xl {
+        font-size: 3.5rem !important;
+    }
+    
+    /* Background shapes - medium size */
+    #product-intro .abstract-shape {
+        transform: scale(0.75) !important;
+    }
+    
+    /* Product Features Section */
+    #product-features {
+        padding: 4rem 0 !important;
+    }
+    
+    #product-features .text-4xl {
+        font-size: 2.5rem !important;
+    }
+    
+    #product-features .lg\:text-5 xl {
+        font-size: 2.5rem !important;
+    }
+    
+    /* Grid - 2 columns on tablet */
+    #product-features .lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    #product-features .gap-8 {
+        gap: 2rem !important;
+    }
+    
+    /* Feature cards */
+    #product-features .p-8 {
+        padding: 2rem !important;
+    }
+    
+    /* Product Slides Section */
+    #product-slides {
+        padding: 4rem 0 !important;
+    }
+    
+    /* Keep 2-column layout on tablet */
+    #product-slides .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    #product-slides .gap-16 {
+        gap: 3rem !important;
+    }
+    
+    #product-slides .lg\:gap-24 {
+        gap: 3rem !important;
+    }
+    
+    /* Typography */
+    #product-slides .text-4xl {
+        font-size: 2.5rem !important;
+    }
+    
+    #product-slides .lg\:text-6 xl {
+        font-size: 3rem !important;
+    }
+    
+    #product-slides .text-xl {
+        font-size: 1.125rem !important;
+    }
+    
+    #product-slides .lg\:text-2 xl {
+        font-size: 1.25rem !important;
+    }
+    
+    /* Product showcase - 2 columns */
+    #product-slides .lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    /* Slide cards */
+    .slide-card {
+        padding: 2rem !important;
+    }
+    
+    .slide-card img {
+        width: 7rem !important;
+        height: 7rem !important;
+    }
+    
+    .slide-card h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Large desktop responsive (1024px+) */
+@media (min-width: 1024px) {
+    /* Ensure desktop styles work properly */
+    #product-intro .lg\:text-7 xl {
+        font-size: 4.5rem !important;
+    }
+    
+    #product-features .lg\:text-5 xl {
+        font-size: 3rem !important;
+    }
+    
+    #product-features .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+    
+    #product-slides .lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+    
+    #product-slides .lg\:text-6 xl {
+        font-size: 3.75rem !important;
+    }
+    
+    #product-slides .lg\:text-2 xl {
+        font-size: 1.5rem !important;
+    }
+    
+    #product-slides .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* ======================================================== */
+/* ENHANCED MOBILE INTERACTIONS */
+/* ======================================================== */
+
+@media (max-width: 640px) {
+    /* Touch-friendly interactions */
+    #product-features .group:hover {
+        transform: none !important;
+    }
+    
+    #product-features .hover\:shadow-xl:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    #product-features .hover\:-translate-y-1:hover {
+        transform: none !important;
+    }
+    
+    /* Reduce animation intensity */
+    #product-intro .animate-blob {
+        animation: none !important;
+    }
+    
+    #product-intro .animate-pulse {
+        animation: none !important;
+    }
+    
+    #product-intro .animate-pulse-slow,
+    #product-intro .animate-pulse-slower {
+        animation: none !important;
+    }
+    
+    /* Simplify backgrounds on mobile */
+    #product-intro .backdrop-blur-xl {
+        backdrop-filter: blur(8px) !important;
+    }
+    
+    #product-features .backdrop-blur-2xl {
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    /* Button tap effects */
+    #product-features button:active,
+    #product-slides button:active {
+        transform: translateY(1px) !important;
+        transition: transform 0.1s ease !important;
+    }
+}
+
+/* ======================================================== */
+/* ACCESSIBILITY IMPROVEMENTS */
+/* ======================================================== */
+
+/* Focus states for keyboard navigation */
+#product-features button:focus,
+#product-features a:focus,
+#product-slides button:focus,
+#product-slides a:focus {
+    outline: 2px solid #6366f1;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    #product-intro .bg-white-opacity-70 {
+        background-color: white !important;
+        border: 2px solid #000 !important;
+    }
+    
+    #product-features .bg-white {
+        background-color: white !important;
+        border: 2px solid #000 !important;
+    }
+    
+    .slide-card {
+        background-color: white !important;
+        border: 2px solid #000 !important;
+    }
+    
+    #product-features .text-gray-600,
+    #product-slides .text-gray-600 {
+        color: #374151 !important;
+    }
+    
+    #product-features .text-gray-900,
+    #product-slides .text-gray-900 {
+        color: #111827 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    #product-intro *,
+    #product-features *,
+    #product-slides * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    #product-features .hover\:-translate-y-1:hover,
+    #product-features .group-hover\:scale-110:hover {
+        transform: none !important;
+    }
+}
+
+/* ======================================================== */
+/* ENHANCED RESPONSIVE SPACING */
+/* ======================================================== */
+
+/* Very small screens (max-width: 360px) */
+@media (max-width: 360px) {
+    #product-intro {
+        min-height: 85vh !important;
+        padding: 1rem 0 !important;
+    }
+    
+    #product-intro .text-5xl,
+    #product-intro .lg\:text-7 xl {
+        font-size: 1.5rem !important;
+    }
+    
+    #product-intro .product-image {
+        height: 50% !important;
+        max-height: 280px !important;
+    }
+    
+    #product-features {
+        padding: 2rem 0 !important;
+    }
+    
+    #product-features .text-4xl,
+    #product-features .lg\:text-5 xl {
+        font-size: 1.5rem !important;
+    }
+    
+    #product-features .p-8 {
+        padding: 1rem !important;
+    }
+    
+    #product-slides {
+        padding: 1.5rem 0 !important;
+    }
+    
+    #product-slides .text-4xl,
+    #product-slides .lg\:text-6 xl {
+        font-size: 1.5rem !important;
+    }
+    
+    .slide-card {
+        padding: 1rem !important;
+    }
+    
+    .slide-card img {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+    
+    .slide-card h3 {
+        font-size: 1rem !important;
+    }
+}
+
+/* Extra large screens (min-width: 1280px) */
+@media (min-width: 1280px) {
+    #product-intro .lg\:text-7 xl {
+        font-size: 5rem !important;
+    }
+    
+    #product-features .lg\:text-5 xl {
+        font-size: 3.5rem !important;
+    }
+    
+    #product-slides .lg\:text-6 xl {
+        font-size: 4rem !important;
+    }
+    
+    #product-slides .lg\:text-2 xl {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* ======================================================== */
+/* PERFORMANCE OPTIMIZATIONS */
+/* ======================================================== */
+
+/* Optimize animations for mobile */
+@media (max-width: 640px) {
+    #product-intro .product-image {
+        will-change: transform;
+        transform: translateZ(0);
+    }
+    
+    #product-features .group {
+        will-change: auto;
+    }
+    
+    /* Reduce blur effects on mobile for performance */
+    #product-intro .blur-120 {
+        filter: blur(60px) !important;
+    }
+    
+    #product-intro .blur-100 {
+        filter: blur(50px) !important;
+    }
+    
+    #product-intro .blur-90 {
+        filter: blur(45px) !important;
+    }
+    
+    #product-intro .blur-110 {
+        filter: blur(55px) !important;
+    }
+    
+    #product-intro .blur-80 {
+        filter: blur(40px) !important;
+    }
+}
+
+/* ======================================================== */
+/* ADDITIONAL CUSTOM UTILITIES */
+/* ======================================================== */
+
+/* Glassmorphism effect variations */
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced gradient text effects */
+.gradient-text-primary {
+    background: linear-gradient(90deg, #6366f1, #ec4899, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-text-warm {
+    background: linear-gradient(90deg, #f59e0b, #ef4444, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Product-specific animations */
+@keyframes product-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes product-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.product-float {
+    animation: product-float 3s ease-in-out infinite;
+}
+
+.product-pulse {
+    animation: product-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced mobile-specific styles */
+@media (max-width: 640px) {
+    .mobile-stack {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mobile-center {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .mobile-full-width {
+        width: 100%;
+    }
+    
+    /* Enhanced touch targets */
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 12px;
+    }
+    
+    /* Mobile-optimized shadows */
+    .mobile-shadow {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Reduced motion for mobile */
+    .no-motion {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 641px) and (max-width: 1023px) {
+    .tablet-grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .tablet-spacing {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1024px) {
+    .desktop-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .desktop-spacing {
+        padding: 4rem 2rem;
+    }
+    
+    /* Enhanced hover effects for desktop */
+    .desktop-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+}
+
+/* Product image optimizations */
+.product-image-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+@media (max-width: 640px) {
+    .product-image-responsive {
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .product-image-responsive {
+        max-height: 400px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-image-responsive {
+        max-height: 500px;
+    }
+}
+
+/* Enhanced typography system */
+.text-responsive-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text-responsive-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.text-responsive-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.text-responsive-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-responsive-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-responsive-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+@media (min-width: 640px) {
+    .text-responsive-lg { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-responsive-xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-responsive-2xl { font-size: 2rem; line-height: 2.5rem; }
+    .text-responsive-3xl { font-size: 2.5rem; line-height: 3rem; }
+}
+
+@media (min-width: 1024px) {
+    .text-responsive-xl { font-size: 1.75rem; line-height: 2.25rem; }
+    .text-responsive-2xl { font-size: 2.25rem; line-height: 2.75rem; }
+    .text-responsive-3xl { font-size: 3rem; line-height: 3.5rem; }
+}
+
+/* Loading states for product images */
+.product-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Print styles */
+@media print {
+    #product-intro,
+    #product-features,
+    #product-slides {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .slide-card {
+        border: 1px solid #ccc !important;
+        background: white !important;
+    }
+    
+    /* Hide decorative elements */
+    .abstract-shape,
+    svg {
+        display: none !important;
+    }
+}

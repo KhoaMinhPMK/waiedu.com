@@ -1,38 +1,51 @@
 <!-- Product Intro Section -->
 <section id="product-intro" class="min-h-screen flex items-center relative overflow-hidden">
-    <!-- Layer 1: Background with Apple-inspired design -->
+    <!-- Layer 1: Enhanced colorful background with abstract shapes -->
     <div class="absolute inset-0 z-0">
-        <!-- Rich dark-to-light gradient base -->
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-100 via-gray-50 to-white"></div>
+        <!-- Rich vibrant gradient base -->
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/80 via-purple-800/70 to-blue-900/80"></div>
         
-        <!-- Apple-style color blobs -->
-        <div class="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-[120px] bg-gradient-to-br from-blue-200/20 to-indigo-300/20 opacity-60"></div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-purple-200/20 to-indigo-200/20 opacity-50"></div>
+        <!-- Colorful abstract shapes -->
+        <div class="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-[120px] bg-gradient-to-br from-blue-500/30 to-cyan-400/30 opacity-70 animate-blob"></div>
+        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[100px] bg-gradient-to-br from-purple-500/30 to-pink-400/30 opacity-60 animate-blob animation-delay-2000"></div>
+        <div class="absolute top-1/2 right-1/4 w-[400px] h-[400px] rounded-full blur-[90px] bg-gradient-to-br from-emerald-400/20 to-teal-300/20 opacity-50 animate-blob animation-delay-4000"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-[450px] h-[450px] rounded-full blur-[110px] bg-gradient-to-br from-rose-400/20 to-red-300/20 opacity-40 animate-blob animation-delay-3000"></div>
+        
+        <!-- Abstract geometric shapes -->
+        <div class="absolute top-[10%] right-[15%] w-[150px] h-[150px] bg-gradient-to-r from-indigo-500/40 to-purple-500/40 rounded-xl transform rotate-12 abstract-shape"></div>
+        <div class="absolute bottom-[20%] left-[10%] w-[120px] h-[120px] bg-gradient-to-r from-blue-500/40 to-cyan-500/40 rounded-full abstract-shape animation-delay-2000"></div>
+        <div class="absolute top-[30%] left-[20%] w-[100px] h-[180px] bg-gradient-to-t from-amber-500/30 to-yellow-400/30 rounded-full transform -rotate-15 abstract-shape animation-delay-4000"></div>
         
         <!-- Subtle grid pattern -->
-        <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
     </div>
     
-    <!-- Layer 2: Subtle color accents -->
+    <!-- Layer 2: Enhanced color accents -->
     <div class="absolute inset-0 z-5 pointer-events-none">
         <!-- Cyan accent -->
-        <div class="absolute left-1/4 top-1/3 w-[300px] h-[300px] rounded-full blur-[80px] bg-cyan-400/10"></div>
+        <div class="absolute left-1/4 top-1/3 w-[300px] h-[300px] rounded-full blur-[80px] bg-cyan-400/20 animate-pulse-slow"></div>
         
         <!-- Purple accent -->
-        <div class="absolute right-1/4 bottom-1/3 w-[350px] h-[350px] rounded-full blur-[100px] bg-purple-400/10"></div>
+        <div class="absolute right-1/4 bottom-1/3 w-[350px] h-[350px] rounded-full blur-[100px] bg-purple-400/20 animate-pulse-slower"></div>
         
-        <!-- Warm glow at center-bottom -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] rounded-[50%] blur-[80px] bg-gradient-to-t from-amber-200/10 to-transparent"></div>
+        <!-- Warm glow at center -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-[50%] blur-[100px] bg-gradient-radial from-amber-400/15 to-transparent"></div>
     </div>
     
     <!-- Layer 3: Product Image - HIGHEST Z-INDEX -->
-    <div class="absolute inset-0 z-100 flex items-center justify-center pointer-events-none">
-        <img 
-            src="./assets/product2.png" 
-            alt="Educational product" 
-            class="w-auto h-[85%] object-contain object-bottom mt-auto"
-            style="filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.12));"
-        />
+    <div class="absolute inset-0 z-100 flex items-center justify-center">
+        <div class="swiper heroSwiper w-full h-full">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide flex items-end justify-center overflow-hidden pb-10">
+                    <img src="./assets/product2.png" alt="Educational product" class="w-auto h-[85%] object-contain object-bottom product-image translate-y-[30px]" id="productImage" style="filter: drop-shadow(0 20px 50px rgba(0,0,0,0.12));" />
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide flex items-end justify-center overflow-hidden pb-10">
+                    <img src="./assets/mockup1.svg" alt="Product mockup" class="w-auto h-[85%] object-contain object-bottom product-image translate-y-[30px]" style="filter: drop-shadow(0 20px 50px rgba(0,0,0,0.12));" />
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- Layer 4: Content -->
@@ -47,8 +60,8 @@
             <!-- Main heading - refined spacing -->
             <div class="space-y-5 -mt-6">
                 <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight">
-                    <span class="block text-gray-800">Complete</span>
-                    <span class="block bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+                    <span class="block text-white">Complete</span>
+                    <span class="block bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
                         Educational Solutions
                     </span>
                 </h1>
@@ -242,6 +255,185 @@
     </div>
 </section>
 
+<!-- Product Slides Section - Apple-style Ecosystem -->
+
+<section id="product-slides" class="relative py-32 overflow-hidden">
+  <!-- Gradient backdrop -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-100 via-purple-100 to-teal-100"></div>
+
+  <!-- Decorative top wave -->
+  <svg class="absolute top-0 left-0 w-full h-24 text-white -translate-y-1 select-none pointer-events-none" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path d="M0 128L80 138.7C160 149 320 171 480 149.3C640 128 800 64 960 69.3C1120 75 1280 149 1360 186.7L1440 224V0H0Z" fill="currentColor" />
+  </svg>
+
+  <!-- Decorative bottom wave -->
+  <svg class="absolute bottom-0 left-0 w-full h-24 text-white translate-y-1 select-none pointer-events-none" viewBox="0 0 1440 320" preserveAspectRatio="none">
+    <path d="M0 96L60 122.7C120 149 240 203 360 208C480 213 600 171 720 154.7C840 139 960 149 1080 144C1200 139 1320 117 1380 106.7L1440 96V320H0Z" fill="currentColor" />
+  </svg>
+
+  <div class="container mx-auto px-4 lg:px-8">
+    <!-- Apple-style Hero Section with Two-Column Layout -->
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center min-h-[80vh] py-16 lg:py-24">
+        
+        <!-- Left Column - Content -->
+        <div class="space-y-8 lg:space-y-12">
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-full">
+            <span class="text-sm font-medium text-blue-700">WAIEDU Ecosystem</span>
+          </div>
+          
+          <!-- Main Heading -->
+          <div class="space-y-6">
+            <h2 class="text-4xl lg:text-6xl font-semibold text-gray-900 leading-tight tracking-tight ecosystem-title">
+              Discover the 
+              <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                WAIEDU
+              </span>
+              <br />Ecosystem
+            </h2>
+            <p class="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-lg ecosystem-subtitle">
+              Complete solutions from hardware to software, ready to elevate STEM education
+            </p>
+          </div>
+          
+          <!-- Feature List -->
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4 ecosystem-feature-card">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center feature-icon">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Smart STEM Kit</h3>
+                <p class="text-gray-600">Modular design with AI color coding, easy assembly and unlimited expansion</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4 ecosystem-feature-card">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center feature-icon">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">AI-Powered Platform</h3>
+                <p class="text-gray-600">Real-time 3D recognition, AR force visualization and AI chatbot support</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4 ecosystem-feature-card">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center feature-icon">
+                <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Integrated Curriculum</h3>
+                <p class="text-gray-600">Standards-aligned content, experiment guides and continuous updates</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- CTA Button -->
+          <div class="pt-6">
+            <button class="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ecosystem-cta-button">
+              <span>Explore Now</span>
+              <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Right Column - Product Mockup -->
+        <div class="relative lg:h-[600px] flex items-center justify-center">
+          <!-- Background Elements -->
+          <div class="absolute inset-0">
+            <!-- Gradient Orb 1 -->
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
+            <!-- Gradient Orb 2 -->
+            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+            <!-- Floating Grid -->
+            <div class="absolute inset-0 opacity-5">
+              <div class="h-full w-full" style="background-image: radial-gradient(circle, #6366f1 1px, transparent 1px); background-size: 20px 20px;"></div>
+            </div>
+          </div>
+          
+          <!-- Main Product Image -->
+          <div class="relative z-10 transform hover:scale-105 transition-transform duration-700 ease-out">
+            <!-- Phone Mockup with Shadow -->
+            <div class="relative">
+              <!-- Glowing Shadow -->
+              <div class="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-indigo-500/30 rounded-[3rem] blur-2xl scale-105 animate-pulse"></div>
+              
+              <!-- Phone Image -->
+              <img 
+                src="./assets/mockup1.svg" 
+                alt="WAIEDU Mobile App" 
+                class="relative w-80 lg:w-96 h-auto object-contain drop-shadow-2xl select-none pointer-events-none ecosystem-mockup"
+              />
+              
+              <!-- Floating UI Elements -->
+              <div class="absolute top-20 -left-16 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-100 animate-float ecosystem-floating-card">
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span class="text-sm font-medium text-gray-700">AI Connected</span>
+                </div>
+              </div>
+              
+              <div class="absolute bottom-24 -right-16 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-100 animate-float animation-delay-500 ecosystem-floating-card">
+                <div class="text-center">
+                  <div class="text-lg font-bold text-gray-900">99.2%</div>
+                  <div class="text-xs text-gray-600">Accuracy</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('Apple-style ecosystem section loaded');
+    
+    // Enhanced button interaction
+    const ctaButton = document.querySelector('.ecosystem-cta-button');
+    if (ctaButton) {
+      ctaButton.addEventListener('mouseenter', () => {
+        ctaButton.style.transform = 'translateY(-2px) scale(1.02)';
+      });
+      
+      ctaButton.addEventListener('mouseleave', () => {
+        ctaButton.style.transform = 'translateY(0) scale(1)';
+      });
+    }
+
+    // Add smooth hover effects for feature cards
+    const featureCards = document.querySelectorAll('.ecosystem-feature-card');
+    featureCards.forEach((card, index) => {
+      card.addEventListener('mouseenter', () => {
+        const icon = card.querySelector('.feature-icon');
+        if (icon) {
+          icon.style.transform = 'scale(1.1)';
+        }
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        const icon = card.querySelector('.feature-icon');
+        if (icon) {
+          icon.style.transform = 'scale(1)';
+        }
+      });
+    });
+  });
+</script>
+
 <!-- CSS for blob animation -->
 <style>
     @keyframes blob {
@@ -270,4 +462,146 @@
     .animation-delay-4000 {
         animation-delay: 4s;
     }
+    
+    /* CSS cho hiệu ứng animation khi cuộn tới ảnh sản phẩm */
+    .product-image {
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .product-image.animate-product {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+    
+    @keyframes float {
+        0% {
+            transform: translateY(50px);
+        }
+        50% {
+            transform: translateY(65px);
+        }
+        100% {
+            transform: translateY(50px);
+        }
+    }
+    
+    /* Animation cho abstract shapes */
+    .abstract-shape {
+        opacity: 0.7;
+        animation: shape-float 10s ease-in-out infinite;
+    }
+    
+    @keyframes shape-float {
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+        25% {
+            transform: translateY(-10px) rotate(5deg);
+        }
+        50% {
+            transform: translateY(0) rotate(0);
+        }
+        75% {
+            transform: translateY(10px) rotate(-5deg);
+        }
+        100% {
+            transform: translateY(0) rotate(0);
+        }
+    }
+    
+    .animation-delay-3000 {
+        animation-delay: 3s;
+    }
+    
+    /* Pulse animations with different speeds */
+    @keyframes pulse-slow {
+        0%, 100% {
+            opacity: 0.2;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+    
+    @keyframes pulse-slower {
+        0%, 100% {
+            opacity: 0.1;
+        }
+        50% {
+            opacity: 0.4;
+        }
+    }
+    
+    .animate-pulse-slow {
+        animation: pulse-slow 5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .animate-pulse-slower {
+        animation: pulse-slower 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
 </style> 
+
+<!-- JavaScript cho hiệu ứng cuộn và animation -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const productImage = document.getElementById('productImage');
+        const productSection = document.getElementById('product-intro');
+        const abstractShapes = document.querySelectorAll('.abstract-shape');
+        
+        // Animation ban đầu cho ảnh sản phẩm khi trang tải
+        setTimeout(() => {
+            productImage.style.opacity = '1';
+            // Giữ nguyên transform translateY(10px) từ CSS
+        }, 300);
+        
+        // Thêm hiệu ứng parallax khi cuộn
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const scrollFactor = 0.05;
+            
+            // Hiệu ứng parallax cho các hình dạng trừu tượng
+            abstractShapes.forEach((shape, index) => {
+                const direction = index % 2 === 0 ? 1 : -1;
+                const speed = 0.03 + (index * 0.01);
+                shape.style.transform = `translateY(${scrollPosition * speed * direction}px)`;
+            });
+        });
+    });
+</script>
+
+<!-- Custom styles for slide cards -->
+<style>
+  .slide-card {
+    @apply relative h-full p-10 bg-white/85 backdrop-blur-2xl rounded-[28px] border border-white/30 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col items-center text-center overflow-hidden;
+  }
+  .slide-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(99,102,241,0.12), rgba(236,72,153,0.12), rgba(16,185,129,0.12));
+    opacity: 0;
+    transition: opacity .6s;
+    pointer-events: none;
+  }
+  .slide-card:hover::before {
+    opacity: 1;
+  }
+  .slide-card img {
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.12));
+  }
+  .slide-card h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: linear-gradient(90deg,#6366f1,#ec4899,#10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+  }
+  .slide-card ul li span {
+    font-weight: 500;
+  }
+</style>

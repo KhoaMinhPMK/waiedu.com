@@ -2,6 +2,8 @@
 @import './components/header.css';
 @import './components/hero.css';
 @import './components/about.css';
+@import './components/solution.css';
+@import './components/product.css';
 @import './components/sections.css';
 @tailwind base;
 @tailwind components;
