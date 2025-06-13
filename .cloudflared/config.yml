@@ -1,0 +1,7 @@
+tunnel: 32cc775b-1764-4947-9340-eb080c27e860
+credentials-file: C:\Users\fujitsu\.cloudflared\32cc775b-1764-4947-9340-eb080c27e860.json
+
+ingress:
+  - hostname: waiedu.live
+    service: http://localhost:3000    # port được Vite tự động chọn
+  - service: http_status:404
