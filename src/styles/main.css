@@ -862,4 +862,235 @@ main {
 /* Ensure content is properly placed */
 #product-intro .container {
     z-index: 50; /* Content above background but below product */
+}
+
+/* =================================================================
+   REMOVE BLUE FOCUS/OUTLINE EFFECTS FROM BUTTONS AND LINKS
+   ================================================================= */
+
+/* Remove browser default blue outline/focus ring */
+button,
+a,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"] {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+    
+    /* Remove browser default focus ring */
+    -webkit-focus-ring-color: transparent !important;
+    
+    /* Prevent blue tap highlight on mobile */
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove blue outline on focus states */
+button:focus,
+button:focus-visible,
+button:active,
+a:focus,
+a:focus-visible,
+a:active,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+[role="button"]:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    outline-offset: 0 !important;
+}
+
+/* Remove Firefox inner border/outline */
+button::-moz-focus-inner,
+a::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner {
+    border: 0 !important;
+    outline: none !important;
+}
+
+/* Remove WebKit/Safari blue focus ring */
+button::-webkit-focus-ring-color,
+a::-webkit-focus-ring-color,
+input::-webkit-focus-ring-color {
+    outline-color: transparent !important;
+}
+
+/* Remove Tailwind CSS blue focus effects */
+.focus\:ring-2:focus,
+.focus\:ring:focus,
+.focus\:outline-none:focus,
+.focus\:ring-blue-500:focus,
+.focus\:ring-primary-500:focus,
+.focus\:ring-offset-2:focus,
+.focus-ring:focus {
+    outline: none !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+    --tw-ring-offset-shadow: 0 0 #0000 !important;
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+}
+
+/* Override any blue ring/outline classes */
+button[class*="ring"],
+a[class*="ring"],
+button[class*="outline"],
+a[class*="outline"] {
+    outline: none !important;
+    --tw-ring-shadow: 0 0 #0000 !important;
+    --tw-ring-offset-shadow: 0 0 #0000 !important;
+}
+
+/* =================================================================
+   PREVENT BORDER-RADIUS CHANGES ON BUTTON/LINK INTERACTIONS
+   ================================================================= */
+
+/* Ensure border-radius remains stable for all buttons and links */
+button,
+a,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"] {
+    /* Prevent border-radius from being included in transitions */
+    transition-property: background-color, color, box-shadow, transform, opacity, border-color !important;
+}
+
+/* Override any existing transition-all or transition that might include border-radius */
+button.transition-all,
+a.transition-all,
+input[type="button"].transition-all,
+input[type="submit"].transition-all,
+input[type="reset"].transition-all,
+[role="button"].transition-all,
+.btn.transition-all,
+.button.transition-all {
+    transition-property: background-color, color, box-shadow, transform, opacity, border-color !important;
+}
+
+/* Specific override for common button classes to maintain their intended border-radius */
+.btn-hero-primary,
+.btn-hero-primary:hover,
+.btn-hero-primary:focus,
+.btn-hero-primary:active,
+.btn-hero-secondary,
+.btn-hero-secondary:hover,
+.btn-hero-secondary:focus,
+.btn-hero-secondary:active {
+    border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+    -moz-border-radius: 16px !important;
+    border-top-left-radius: 16px !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+}
+
+.nav-link-glass,
+.nav-link-glass:hover,
+.nav-link-glass:focus,
+.nav-link-glass:active,
+.nav-link-glass.active {
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.btn-primary-glass,
+.btn-primary-glass:hover,
+.btn-primary-glass:focus,
+.btn-primary-glass:active {
+    border-radius: 32px !important;
+    -webkit-border-radius: 32px !important;
+    -moz-border-radius: 32px !important;
+    border-top-left-radius: 32px !important;
+    border-top-right-radius: 32px !important;
+    border-bottom-left-radius: 32px !important;
+    border-bottom-right-radius: 32px !important;
+}
+
+.btn-glass,
+.btn-glass:hover,
+.btn-glass:focus,
+.btn-glass:active {
+    border-radius: 1rem !important; /* 16px */
+    -webkit-border-radius: 1rem !important;
+    -moz-border-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+}
+
+/* Override any CSS framework transitions that affect border-radius */
+.transition-all {
+    transition-property: background-color, color, box-shadow, transform, opacity, border-color !important;
+}
+
+.transition {
+    transition-property: background-color, color, box-shadow, transform, opacity, border-color !important;
+}
+
+/* Specifically target common rounded classes to ensure they don't change on interaction */
+
+.rounded-xl,
+.rounded-xl:hover,
+.rounded-xl:focus,
+.rounded-xl:active {
+    border-radius: 0.75rem !important;
+}
+
+.rounded-2xl,
+.rounded-2xl:hover,
+.rounded-2xl:focus,
+.rounded-2xl:active {
+    border-radius: 1rem !important;
+}
+
+.rounded-3xl,
+.rounded-3xl:hover,
+.rounded-3xl:focus,
+.rounded-3xl:active {
+    border-radius: 1.5rem !important;
+}
+
+.rounded-lg,
+.rounded-lg:hover,
+.rounded-lg:focus,
+.rounded-lg:active {
+    border-radius: 0.5rem !important;
+}
+
+.rounded-full,
+.rounded-full:hover,
+.rounded-full:focus,
+.rounded-full:active {
+    border-radius: 9999px !important;
+}
+
+/* Override mobile responsiveness if it affects border-radius */
+@media (max-width: 640px) {
+    .btn-primary-glass,
+    .btn-primary-glass:hover,
+    .btn-primary-glass:focus,
+    .btn-primary-glass:active {
+        border-radius: 20px !important;
+    }
+    
+    .btn-glass,
+    .btn-glass:hover,
+    .btn-glass:focus,
+    .btn-glass:active {
+        border-radius: 1rem !important;
+    }
 } 
